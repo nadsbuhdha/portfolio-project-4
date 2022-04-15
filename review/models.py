@@ -19,6 +19,7 @@ class AlbumReview(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='review_auth')
     album_score = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)]) # noqa
     approved = models.BooleanField(default=False)
+    body = models.TextField(default='Add your review here')
 
     class Meta:
         ordering = ["-date_created"]
