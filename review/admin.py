@@ -30,4 +30,3 @@ class CommentAdmin(admin.ModelAdmin):
         """
         queryset.update(approved=True)
 
-# admin.site.register(AlbumReview)
