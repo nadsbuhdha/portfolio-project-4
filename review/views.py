@@ -8,3 +8,10 @@ class IndexPage(generic.ListView):
     queryset = AlbumReview.objects.filter(status=1).order_by('-date_created')
     template_name = 'index.html'
     paginate_by = '4'
+
+
+class ReviewPage(generic.ListView):
+    model = AlbumReview
+    queryset = AlbumReview.objects.filter(status=1).order_by('-date_created')
+    template_name = 'reviews.html'
+    paginate_by = '8'
