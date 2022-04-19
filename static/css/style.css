@@ -1,4 +1,5 @@
 
-p {
-    colour:red
+/* review card styling */ 
+.review-card {
+    width:18rem ;
 }
