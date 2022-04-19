@@ -1,5 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>TESTING</p>
+
+<li>{% for post in object_list %}
+{{ post.title}}
+{{ post.author}}
+{{ post.body}}
+{{ post.artist}}
+{{post.genre}}
+{%endfor%}</li>
+
 {%endblock%}
