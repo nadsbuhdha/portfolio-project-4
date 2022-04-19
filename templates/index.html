@@ -7,30 +7,45 @@
 </div>
 <!--Review Cards-->
 <div class="container-fluid">
-    <div class="row" >
-        <div class="col-12 col-md-6 col-lg-3">
-    {% for post in object_list %}
-    <div class="col-md-4">
-        <div class="card h-100 review-card" >
-            <div class="image-container">
-                {% if "placeholder" in post.album_image.url %}
-                <img class="card-img-top"
-                    src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg">
-                {% else %}
-                <img class="card-img-top" src=" {{ post.featured_image.url }}">
+    <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-6 ">
+            <div class="row">
+                {% for post in object_list %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body review-card">
+                            <div class="image-container ">
+                                {% if "placeholder" in post.album_image.url  %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.album_image.url }}">
+                                {% endif %}
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title text-center">{{ post.artist}}</h4>
+                                <h5 class="text-center">{{ post.album_title}}</h5>
+                            </div>
+                
+                            <ul class="list-group list-group-flush"></ul>
+                                <li class="list-group-item text-center">Genre: {{post.genre}}</li>
+                                <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
+                                <li class="list-group-item text-center">Author: {{post.author}}</li>
+
+                        </div>
+                    </div>
+                </div>
+                {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
                 {% endif %}
+                {% endfor %}
+
             </div>
-            <div class="card-body">
-                <h4 class="card-title text-center">{{ post.artist}}</h4>
-                <h5 class="text-center">{{ post.album_title}}</h5>
-            </div>
-        <ul class="list-group list-group-flush"></ul>
-        <li class="list-group-item text-center">Genre: {{post.genre}}</li>
-        <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
-        <li class="list-group-item text-center">Author: {{post.author}}</li>
-            
-    {%endfor%}
-            
+        </div>
     </div>
 </div>
+
 {%endblock%}
