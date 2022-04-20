@@ -9,13 +9,13 @@
 <div class="container-fluid">
     <div class="row">
 
-        <!-- Blog Entries Column -->
-        <div class="col-6 ">
+        
+        <div class="col-12 mt-3">
             <div class="row">
                 {% for post in object_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body review-card">
+                <div class="col-md-3 sm-2 mb-5">
+                    <div class="card mx-auto ">
+                        <div class="card-body review-card mb-5">
                             <div class="image-container ">
                                 {% if "placeholder" in post.album_image.url  %}
                                 <img class="card-img-top"
@@ -29,20 +29,21 @@
                                 <h5 class="text-center">{{ post.album_title}}</h5>
                             </div>
                 
-                            <ul class="list-group list-group-flush"></ul>
+                            <ul class="list-group list-group-flush">
                                 <li class="list-group-item text-center">Genre: {{post.genre}}</li>
                                 <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
                                 <li class="list-group-item text-center">Author: {{post.author}}</li>
-
+                            </ul>
                         </div>
                     </div>
                 </div>
-                {% if forloop.counter|divisibleby:4 %}
+            
+            
+            {% if forloop.counter|divisibleby:4 %}
             </div>
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
