@@ -42,4 +42,4 @@ class AddPost(CreateView):
     model = AlbumReview
     template_name = 'create_post.html'
     fields = ['album_title', 'artist', 'genre', 
-    'album_image', 'album_score', 'body', 'status']
+    'album_image', 'album_score', 'body', 'status', 'author', 'slug']

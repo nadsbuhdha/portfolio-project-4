@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.urls import reverse
 # Create your models here.
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -29,6 +30,9 @@ class AlbumReview(models.Model):
         
     def num_of_likes(self):
        return self.likes.count()
+    
+    def get_absolute_url(self):
+        return reverse("home")
 
 class Comment (models.Model):
     album_review = models.ForeignKey(AlbumReview, on_delete=models.CASCADE, related_name='comments')
