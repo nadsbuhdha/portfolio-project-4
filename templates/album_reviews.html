@@ -20,7 +20,7 @@
           <p class="card-text">{{post.artist}}</p>
           <p class="card-text">{{post.genre}}</p>
           <p class="card-text">{{post.album_score}}</p>
-          <p class="card-text"><small class="text-muted">{{post.date_created}}</small></p>
+          <p class="card-text"><small class="text-muted">{{post.date_created |date:'d-F-Y'}}</small></p>
         </div>
       </div>
     </div>

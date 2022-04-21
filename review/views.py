@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.views.generic.edit import CreateView
 from .models import AlbumReview
 # Create your views here.
 
@@ -35,3 +36,10 @@ class FullReview(View):
                 "liked": liked
             },
         )
+
+
+class AddPost(CreateView):
+    model = AlbumReview
+    template_name = 'create_post.html'
+    fields = ['album_title', 'artist', 'genre', 
+    'album_image', 'album_score', 'body', 'status']
