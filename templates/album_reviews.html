@@ -2,7 +2,7 @@
 {% block content %}
 
 <!-- card -->
-<div class="card mb-3">
+<div class="card mb-3 main-review-card mx-auto p-5">
     <div class="row no-gutters">
       <div class="col-md-4">
         <div class="image-container ">
@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="col-md-8">
-        <div class="card-body">
+        <div class="card-body text-center">
           <h5 class="card-title">{{post.album_title}}</h5>
           <p class="card-text">{{post.artist}}</p>
           <p class="card-text">{{post.genre}}</p>
@@ -25,9 +25,14 @@
       </div>
     </div>
   </div>
-  <div>
+  <hr>
+  <div class ="container-fluid review-body">
       <p>
           {{post.body | safe}}
+      </p>
+      <hr>
+      <p text-center>
+        Review by {{post.author}}
       </p>
   </div>
 
