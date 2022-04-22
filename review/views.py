@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from django.views.generic.edit import CreateView
 from .models import AlbumReview
+from .forms import ReviewForm
 # Create your views here.
 
 class IndexPage(generic.ListView):
@@ -40,6 +41,7 @@ class FullReview(View):
 
 class AddPost(CreateView):
     model = AlbumReview
+    form_class = ReviewForm
     template_name = 'create_post.html'
-    fields = ['album_title', 'artist', 'genre', 
-    'album_image', 'album_score', 'body', 'status', 'author', 'slug']
+    # fields = ['album_title', 'artist', 'genre', 
+    # 'album_image', 'album_score', 'body', 'status', 'author', 'slug']

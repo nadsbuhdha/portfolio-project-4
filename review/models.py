@@ -21,6 +21,7 @@ class AlbumReview(models.Model):
     album_score = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)]) # noqa
     approved = models.BooleanField(default=False)
     body = models.TextField(default='Add your review here')
+    
 
     class Meta:
         ordering = ["-date_created"]
@@ -33,6 +34,8 @@ class AlbumReview(models.Model):
     
     def get_absolute_url(self):
         return reverse("album_reviews", kwargs={"slug": self.slug})
+    
+    
 
 class Comment (models.Model):
     album_review = models.ForeignKey(AlbumReview, on_delete=models.CASCADE, related_name='comments')
