@@ -2,7 +2,7 @@
 {% block content %}
 <form method="POST" class="form-group">
     {% csrf_token %}
-    {{form.as_p}}
+    {{form}}
     <button>Post</button>
 </form>
 {%endblock%}
