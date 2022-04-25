@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+{% if user.is_authenticated %}
 <a class="nav-link active" aria-current="page" href="{% url 'add_post' %}">create review</a>
+{% endif %}
 {%endblock%}
