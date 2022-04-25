@@ -47,9 +47,9 @@ class AddPost(CreateView):
     # 'album_image', 'album_score', 'body', 'status', 'author', 'slug']
 
 
-# class EditPost(UpdateView):
-#     model = AlbumReview
-#     form_class = ReviewForm
-#     template_name = 'edit_post.html'
-#     fields = ['album_title', 'artist', 'genre', 
-#     'album_image', 'album_score', 'body', 'status']
+class EditPost(UpdateView):
+    model = AlbumReview
+    # form_class = ReviewForm
+    template_name = 'edit_post.html'
+    fields = ['album_title', 'artist', 'genre', 
+    'album_image', 'album_score', 'body', 'status']
