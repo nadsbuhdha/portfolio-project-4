@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+    <h2>DELETE POST</h2>
+</div>
+<h2> Delete {{post.album_title}}</h2>
+
+<div class=" container form-group p-4 create-form">
+    <form method="POST">
+    {% csrf_token %}
+    <button><strong>DELETE</strong> </button>
+    </form>
+</div>  
+{%endblock%}
