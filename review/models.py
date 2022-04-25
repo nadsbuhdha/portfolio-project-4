@@ -22,6 +22,7 @@ class AlbumReview(models.Model):
     approved = models.BooleanField(default=False)
     body = models.TextField(default='Add your review here')
     
+    
 
     class Meta:
         ordering = ["-date_created"]

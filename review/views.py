@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from .models import AlbumReview
 from .forms import ReviewForm
 # Create your views here.
@@ -45,3 +45,11 @@ class AddPost(CreateView):
     template_name = 'create_post.html'
     # fields = ['album_title', 'artist', 'genre', 
     # 'album_image', 'album_score', 'body', 'status', 'author', 'slug']
+
+
+# class EditPost(UpdateView):
+#     model = AlbumReview
+#     form_class = ReviewForm
+#     template_name = 'edit_post.html'
+#     fields = ['album_title', 'artist', 'genre', 
+#     'album_image', 'album_score', 'body', 'status']
