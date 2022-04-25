@@ -34,7 +34,7 @@
                                 <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
                                 <li class="list-group-item text-center">Author: {{post.author}}</li>
                                 <button type="button"  class="btn btn-info btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
-                                <button type="button"  class="btn btn-dark btn-sm"><a href="{% url 'edit_post' post.pk %}"> Edit</a></button>
+                                <button type="button"  class="btn btn-dark btn-sm"><a href="{% url 'edit_post' post.slug %}"> Edit</a></button>
 
 
                             </ul>

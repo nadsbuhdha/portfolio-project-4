@@ -35,4 +35,7 @@
         Review by {{post.author}}
       </p>
   </div>
+  <div>
+    <button type="button"  class="btn btn-dark btn-sm"><a href="{% url 'edit_post' post.slug %}"> Edit</a></button>
+  </div>
 {%endblock%}
