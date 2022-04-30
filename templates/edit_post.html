@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if request.user.is_authenticated %}
+{%  if request.user.id == object.author.id %}
 <h1>{{ request.user.id }} {{ post }}</h1>
     <div>
-        <h2>Edit </h2>
+        <h2 class="text-center">Edit </h2>
     </div>
     <div class=" container form-group p-4 create-form">
         <form method="POST">
@@ -12,6 +13,9 @@
         <button>Post</button>
         </form>
     </div>
+{% else %}
+<p>Please Logg in to edit </p>
+{% endif %}
   
 {% endif %}
 {%endblock%}
