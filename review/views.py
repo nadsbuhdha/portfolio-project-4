@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import AlbumReview
-from .forms import ReviewForm, EditForm
+from .forms import ReviewForm, EditForm, CommentForm
 # Create your views here.
 
 class IndexPage(generic.ListView):
@@ -35,7 +35,8 @@ class FullReview(View):
             {
                 "post": post,
                 "comments": comments,
-                "liked": liked
+                "liked": liked,
+                "comment_form": CommentForm()
             },
         )
 

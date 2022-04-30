@@ -1,5 +1,5 @@
 from django import forms 
-from .models import AlbumReview
+from .models import AlbumReview, Comment
 from django_summernote.widgets import SummernoteInplaceWidget, SummernoteWidget
 
 class ReviewForm(forms.ModelForm):
@@ -39,3 +39,8 @@ class EditForm(forms.ModelForm):
         'album_image': forms.FileInput(attrs={'class': 'form-control'}),
     }
     
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('comment_body',)
