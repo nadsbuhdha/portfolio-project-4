@@ -37,6 +37,7 @@ class AlbumReview(models.Model):
         return reverse("album_reviews", kwargs={"slug": self.slug})
     
     
+    
 
 class Comment (models.Model):
     album_review = models.ForeignKey(AlbumReview, on_delete=models.CASCADE, related_name='comments')

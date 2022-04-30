@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap');
+body {
+    font-family: 'Andada Pro', serif;
+}
+
+p {
+    font-family: 'Andada Pro', serif;
+}
 
 /* review card styling */ 
 
