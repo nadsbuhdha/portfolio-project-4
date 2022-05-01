@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.urls import reverse_lazy
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.http import HttpResponseRedirect
 from .models import AlbumReview
 from .forms import ReviewForm, EditForm, CommentForm
 # Create your views here.
@@ -100,3 +101,14 @@ class DeletePost(DeleteView):
     model = AlbumReview
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+
+class LikePost(View):
+    def post (self, request, slug):
+        post = get_object_or_404(AlbumReview, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('album_reviews', args=[slug]))
+

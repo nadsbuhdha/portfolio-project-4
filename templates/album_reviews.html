@@ -21,6 +21,7 @@
           <p class="card-text">{{post.artist}}</p>
           <p class="card-text">{{post.genre}}</p>
           <p class="card-text">{{post.album_score}}</p>
+          <p class="card-text"><i class="fa-solid fa-heart"></i>  {{post.num_of_likes}}</p>
           <p class="card-text"><small class="text-muted">{{post.date_created |date:'d-F-Y'}}</small></p>
         </div>
       </div>
@@ -46,6 +47,24 @@
       </div>
   {% endif %}
   {% endif %}
+  <div class="col">
+    {% if user.is_authenticated %}
+    <form action="{% url 'post_like'  post.slug %}" class="d-inline" method="POST">
+        {% csrf_token %}
+        {% if liked %}
+        <button type="submit" name="album_id" value="{{ post.slug }}"
+            class="btn btn-signup btn-md green-btn"><i class="fas fa-heart"></i>
+            {{ recipe.num_of_likes }} </button>
+        {% else %}
+        <button type="submit" name="album_id" value="{{ post.slug }}"
+            class="btn btn-signup btn-md green-btn"><i class="far fa-heart"></i>
+            {{ recipe.num_of_likes}}</button>
+        {% endif %}
+    </form>
+    {% else %}
+    <span class="text-light"><i class="fas fa-heart"></i> {{ post.num_of_likes }} </span>
+    {% endif %}
+</div>
   <div class="container mt-3">
     <div class="row">
         <hr>
@@ -89,4 +108,5 @@
     </div>
 </div>
 
-{%endblock%}
+
+{% endblock %}
