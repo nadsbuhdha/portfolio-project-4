@@ -85,6 +85,10 @@ class AddPost(CreateView):
     model = AlbumReview
     form_class = ReviewForm
     template_name = 'create_post.html'
+    
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
     # fields = ['album_title', 'artist', 'genre', 
     # 'album_image', 'album_score', 'body', 'status', 'author', 'slug']
 
