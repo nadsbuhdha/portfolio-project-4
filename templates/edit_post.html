@@ -2,7 +2,7 @@
 {% block content %}
 {% if request.user.is_authenticated %}
 {%  if request.user.id == object.author.id %}
-<h1>{{ request.user.id }} {{ post }}</h1>
+<!-- <h1>{{ request.user.id }} {{ post }}</h1> -->
     <div>
         <h2 class="text-center">Edit </h2>
     </div>

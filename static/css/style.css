@@ -42,3 +42,13 @@ p {
 .create-form {
     width: 80%
 }
+
+/* index page styling */
+#opening_para {
+    width:80%
+}
+
+main a {
+    color: black;
+    text-decoration: none;
+}

@@ -2,11 +2,14 @@
 
 {% block content %}
 <!---->
-<div class="container-fluid mt-4 mb-4 text-center">
-    <p>Welcome to Lost tapes a website where users can submit their own album reviews</p>
+<div id="opening_para" class="container-fluid mt-4 mb-4 text-center">
+    <p>Welcome to Lost tapes a website were you the user can share authentic album reviews. 
+        <br> Read the latest album reviews from our users or create your own. <br> Get involved in the 
+        discussion in the comment section and let everyone know your favourite song off an album
+    </p>
 </div>
 <hr>
-<div class="container-fluid mt-4 mb-4 text-left">
+<div class="container-fluid mt-4 mb-4 text-center">
     <h2>Latest Reviews</h2>
 </div>
 <!--Review Cards-->
@@ -19,7 +22,7 @@
                 {% for post in object_list %}
                 <div class="col-md-3 sm-2 mb-5">
                     <div class="card mx-auto ">
-                        <div class="card-body review-card mb-5">
+                        <a href="{% url 'album_reviews' post.slug %}"><div class="card-body review-card mb-5">
                             <div class="image-container ">
                                 {% if "placeholder" in post.album_image.url  %}
                                 <img class="card-img-top"
@@ -27,10 +30,10 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ post.album_image.url }}">
                                 {% endif %}
-                            </div>
+                            </div></a>
                             <div class="card-body">
-                                <h4 class="card-title text-center">{{ post.artist}}</h4>
-                                <h5 class="text-center">{{ post.album_title}}</h5>
+                                <h4 class="card-title text-center"><a href="{% url 'album_reviews' post.slug %}">{{ post.artist}}</h4></a>
+                                <a href="{% url 'album_reviews' post.slug  %}"><h5 class="text-center">{{ post.album_title}}</h5></a>
                             </div>
                 
                             <ul class="list-group list-group-flush">
