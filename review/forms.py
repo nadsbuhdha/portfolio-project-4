@@ -6,7 +6,7 @@ class ReviewForm(forms.ModelForm):
     class Meta:
         model = AlbumReview
         fields = ('album_title', 'artist', 'genre', 
-        'album_image', 'album_score', 'body', 'status', 'author', 'slug')
+        'album_image', 'album_score', 'body', 'status', 'author')
         
         
         widgets = {
@@ -17,7 +17,6 @@ class ReviewForm(forms.ModelForm):
         'status': forms.Select(attrs={'class': 'form-control'}),
         'body': forms.Textarea(attrs={'class': 'form-control'}),
         'author': forms.Select(attrs={'class': 'form-control'}),
-        'slug': forms.TextInput(attrs={'class': 'form-control'}),
         'album_image': forms.FileInput(attrs={'class': 'form-control'}),
     }
     

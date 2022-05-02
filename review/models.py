@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.urls import reverse
+from slugger import AutoSlugField
 # Create your models here.
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -11,7 +12,7 @@ class AlbumReview(models.Model):
     album_title = models.CharField(max_length=50)
     artist = models.CharField(max_length=50)
     genre = models.CharField(max_length=50)
-    slug = models.SlugField(max_length=100, unique=True)
+    slug = AutoSlugField(populate_from='album_title', unique=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
