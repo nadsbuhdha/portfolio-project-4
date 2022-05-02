@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+{% if searched %}
+
+<h1>You Searched for {{ searched }}</h1> 
+
+{% for review in reviews %}
+{{ review.artist }} {{ review }}
+{% endfor %}
+
+{% else %}
+
+<p>enter something to search</p>
+
+{% endif %}
+
+{% endblock %}

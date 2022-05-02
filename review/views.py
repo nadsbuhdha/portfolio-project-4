@@ -116,3 +116,14 @@ class LikePost(View):
 
         return HttpResponseRedirect(reverse('album_reviews', args=[slug]))
 
+
+def search(request):
+    if request.method == "POST":
+        searched = request.POST['searched']
+        reviews = AlbumReview.objects.filter(album_title__contains=searched)
+        return render(request, 'search.html', {'searched': searched, 'reviews': reviews, })
+    else:
+        return render(request, 'search.html', {})
+        
+
+

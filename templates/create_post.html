@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 {% if user.is_authenticated %}
-    <div>
+    <div class="mt-4 mb-2 container-fluid text-center">
         <h2>Add your reivew here</h2>
     </div>
-    <div class=" container form-group p-4 create-form">
+    <div class="container form-group p-4 create-form">
         <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
