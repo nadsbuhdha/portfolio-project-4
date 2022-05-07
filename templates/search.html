@@ -6,18 +6,62 @@
 
 <h1>You Searched for {{ searched }}</h1> 
 
-{% for review in reviews %}
- <!-- <a href="{% url 'album_reviews' review.slug %}"> {{ review }} </a> -->
- 
- <div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><a href="{% url 'album_reviews' review.slug %}"> {{ review.artist }} </a></li>
-      <li class="list-group-item"><a href="{% url 'album_reviews' review.slug %}"> {{ review.album_title }} </a></li>
-    </ul>
+
+
+    <div class="container-fluid">
+      <div class="row">
+
+          
+          <div class="col-12 mt-3">
+              <div class="row">
+                {% for review in reviews %}
+                  <div class="col-md-3 sm-2 mb-5">
+                      <div class="card mx-auto ">
+                          <a href="{% url 'album_reviews' review.slug %}"><div class="card-body review-card mb-5">
+                              <div class="image-container ">
+                                  {% if "placeholder" in review.album_image.url  %}
+                                  <img class="card-img-top"
+                                      src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg">
+                                  {% else %}
+                                  <img class="card-img-top" src=" {{ review.album_image.url }}">
+                                  {% endif %}
+                              </div></a>
+                              <div class="card-body">
+                                  <h4 class="card-title text-center"><a href="{% url 'album_reviews' review.slug %}">{{ review.artist}}</h4></a>
+                                  <a href="{% url 'album_reviews' review.slug  %}"><h5 class="text-center">{{ review.album_title}}</h5></a>
+                              </div>
+                  
+                              <ul class=" mt-2 list-group list-group-flush">
+                                  <li class="list-group-item text-center">Genre: {{review.genre}}</li>
+                                  <li class="list-group-item text-center">Album Score: {{review.album_score}}</li>    
+                                  <li class="list-group-item text-center">Author: {{review.author}}</li>
+                                  <button type="button"  class="btn btn-info btn-sm"><a href="{% url 'album_reviews' review.slug %}"> Read Review</a></button>
+                                  {% if user.is_authenticated %}
+                                  {% if user.id == review.author.id %}
+                                      <div class="row">
+                                          <div class="col-sm-12 text-center">
+                                              <button type="button"  class="btn btn-success btn-sm"><a href="{% url 'edit_post' review.slug %}"> Edit</a></button>
+                                              <button type="button"  class="btn btn-danger btn-sm"><a href="{% url 'delete_post' review.slug %}"> Delete</a></button>
+                                          </div>
+                                      </div>
+                                  {% endif %}
+                                  {% endif %}
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
+              
+              
+              {% if forloop.counter|divisibleby:4 %}
+              </div>
+              <div class="row">
+                  {% endif %}
+                  {% endfor %}
+              </div>
+          </div>
+      </div>
   </div>
 
-
-{% endfor %}
 
 {% else %}
 

@@ -6,6 +6,8 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import AlbumReview
 from .forms import ReviewForm, EditForm, CommentForm
+from django.db.models import Q
+
 # Create your views here.
 
 class IndexPage(generic.ListView):
@@ -130,7 +132,8 @@ class LikePost(View):
 def search(request):
     if request.method == "POST":
         searched = request.POST['searched']
-        reviews = AlbumReview.objects.filter(album_title__icontains=searched)
+        paginate_by = '8'
+        reviews = AlbumReview.objects.filter(Q(album_title__icontains=searched) | Q(artist__icontains=searched, status = 1))
         return render(request, 'search.html',   {'searched': searched, 'reviews': reviews, })
     else:
         return render(request, 'search.html', {})
