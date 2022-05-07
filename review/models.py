@@ -35,7 +35,11 @@ class AlbumReview(models.Model):
        return self.likes.count()
     
     def get_absolute_url(self):
-        return reverse("album_reviews", kwargs={"slug": self.slug})
+        if 'status' == 1:
+            return reverse("album_reviews", kwargs={"slug": self.slug})
+        else:
+            return reverse('home')
+            
     
     
     

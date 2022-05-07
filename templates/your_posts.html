@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!---->
+<div id="opening_para" class="container-fluid mt-4 mb-4 text-center">
+    <p>Welcome to Lost tapes a website were you the user can share authentic album reviews. 
+        <br> Read the latest album reviews from our users or create your own. <br> Get involved in the 
+        discussion in the comment section and let everyone know your favourite song off an album
+    </p>
+</div>
+<hr>
+<div class="container-fluid mt-4 mb-4 text-center">
+    <h2>Latest Reviews</h2>
+</div>
+<!--Review Cards-->
+<div class="container-fluid">
+    <div class="row">
+
+        
+        <div class="col-12 mt-3">
+            <div class="row">
+                {% for post in object_list %}
+                <div class="col-md-3 sm-2 mb-5">
+                    <div class="card mx-auto ">
+                        <a href="{% url 'album_reviews' post.slug %}"><div class="card-body review-card mb-5">
+                            <div class="image-container ">
+                                {% if "placeholder" in post.album_image.url  %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.album_image.url }}">
+                                {% endif %}
+                            </div></a>
+                            <div class="card-body">
+                                <h4 class="card-title text-center"><a href="{% url 'album_reviews' post.slug %}">{{ post.artist}}</h4></a>
+                                <a href="{% url 'album_reviews' post.slug  %}"><h5 class="text-center">{{ post.album_title}}</h5></a>
+                            </div>
+                
+                            <ul class=" mt-2 list-group list-group-flush">
+                                <li class="list-group-item text-center">Genre: {{post.genre}}</li>
+                                <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
+                                <li class="list-group-item text-center">Author: {{post.author}}</li>
+                                <button type="button"  class="btn btn-info btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
+                                {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                    <div class="row">
+                                        <div class="col-sm-12 text-center">
+                                            <button type="button"  class="btn btn-dark btn-sm"><a href="{% url 'edit_post' post.slug %}"> Edit</a></button>
+                                            <button type="button"  class="btn btn-dark btn-sm"><a href="{% url 'delete_post' post.slug %}"> Delete</a></button>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

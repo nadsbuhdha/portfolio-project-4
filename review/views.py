@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.views import generic, View
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import AlbumReview
 from .forms import ReviewForm, EditForm, CommentForm
 # Create your views here.
@@ -19,6 +20,15 @@ class ReviewPage(generic.ListView):
     queryset = AlbumReview.objects.filter(status=1).order_by('-date_created')
     template_name = 'reviews.html'
     paginate_by = '8'
+
+
+class YourPosts(LoginRequiredMixin, generic.ListView):
+    model = AlbumReview
+    template_name = 'your_posts.html'
+    paginate_by = '8'
+
+    def get_queryset(self):
+        return AlbumReview.objects.filter(author=self.request.user).order_by('-date_created')
 
 
 class FullReview(View):
