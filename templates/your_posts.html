@@ -32,7 +32,7 @@
                             <ul class=" mt-2 list-group list-group-flush">
                                 <li class="list-group-item text-center">Genre: {{post.genre}}</li>
                                 <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
-                                <li class="list-group-item text-center">Author: {{post.author}}</li>
+                                <li class="list-group-item text-center">Author: {{post.status}}</li>
                                 <button type="button"  class="btn btn-link btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
                                 {% if user.is_authenticated %}
                                 {% if user.id == post.author.id %}
