@@ -3,14 +3,14 @@
 {% if request.user.is_authenticated %}
 {%  if request.user.id == object.author.id %}
 <!-- <h1>{{ request.user.id }} {{ post }}</h1> -->
-    <div>
+    <div class="mt-4 mb-2 container-fluid text-center">
         <h2 class="text-center page_title">Edit </h2>
     </div>
     <div class=" container form-group p-4 create-form">
         <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <button>Post</button>
+        <button type="button" class="btn btn-dark">Post</button>
         </form>
     </div>
 {% else %}

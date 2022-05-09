@@ -3,9 +3,9 @@
 
 
 {% if searched %}
-
-<h2 class="page_title">You searched for {{ searched }}</h2> 
-
+<div class="container-fluid mt-4 mb-4 text-center">
+    <h2 class="page_title">You searched for {{ searched }}</h2> 
+</div>
 
 
     <div class="container-fluid">
@@ -35,7 +35,7 @@
                                   <li class="list-group-item text-center">Genre: {{review.genre}}</li>
                                   <li class="list-group-item text-center">Album Score: {{review.album_score}}</li>    
                                   <li class="list-group-item text-center">Author: {{review.author}}</li>
-                                  <button type="button"  class="btn btn-info btn-sm"><a href="{% url 'album_reviews' review.slug %}"> Read Review</a></button>
+                                  <button type="button"  class="btn btn-link btn-sm"><a href="{% url 'album_reviews' review.slug %}"> Read Review</a></button>
                                   {% if user.is_authenticated %}
                                   {% if user.id == review.author.id %}
                                       <div class="row">

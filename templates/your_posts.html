@@ -3,7 +3,7 @@
 {% block content %}
 <!---->
 <div class="container-fluid mt-4 mb-4 text-center">
-    <h2 class="Page_title">Your Reviews </h2>
+    <h2 class="page_title">Your Reviews </h2>
 </div>
 <!--Review Cards-->
 <div class="container-fluid">
@@ -33,7 +33,7 @@
                                 <li class="list-group-item text-center">Genre: {{post.genre}}</li>
                                 <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
                                 <li class="list-group-item text-center">Author: {{post.author}}</li>
-                                <button type="button"  class="btn btn-info btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
+                                <button type="button"  class="btn btn-link btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
                                 {% if user.is_authenticated %}
                                 {% if user.id == post.author.id %}
                                     <div class="row">

@@ -16,7 +16,6 @@ class ReviewForm(forms.ModelForm):
         'artist': forms.TextInput(attrs={'class': 'form-control'}),
         'status': forms.Select(attrs={'class': 'form-control'}),
         'body': forms.Textarea(attrs={'class': 'form-control'}),
-        # 'author': forms.Select(attrs={'class': 'form-control'}),
         'album_image': forms.FileInput(attrs={'class': 'form-control'}),
     }
     
