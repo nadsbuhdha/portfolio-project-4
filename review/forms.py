@@ -15,7 +15,7 @@ class ReviewForm(forms.ModelForm):
         'genre': forms.TextInput(attrs={'class': 'form-control'}),
         'artist': forms.TextInput(attrs={'class': 'form-control'}),
         'status': forms.Select(attrs={'class': 'form-control'}),
-        'body': forms.Textarea(attrs={'class': 'form-control'}),
+        'body': SummernoteWidget(),
         'album_image': forms.FileInput(attrs={'class': 'form-control'}),
     }
     
@@ -32,7 +32,7 @@ class EditForm(forms.ModelForm):
         'album_score': forms.NumberInput(attrs={'class': 'form-control'}),
         'genre': forms.TextInput(attrs={'class': 'form-control'}),
         'artist': forms.TextInput(attrs={'class': 'form-control'}),
-        'body': forms.Textarea(attrs={'class': 'form-control'}),
+        'body': SummernoteWidget(),
         'status': forms.Select(attrs={'class': 'form-control'}),
         'album_image': forms.FileInput(attrs={'class': 'form-control'}),
     }
