@@ -1,8 +1,76 @@
 {% extends 'base.html' %}
 {% block content %}
-{% if user.is_authenticated %}
-<a class="nav-link active" aria-current="page" href="{% url 'add_post' %}">create review</a>
 
+<div class="container-fluid mt-4 mb-4 text-center">
+    <h2 class="page_title">Album Reviews</h2>
+</div>
 
+<!--Review Cards-->
+<div class="container-fluid">
+    <div class="row">
+
+        
+        <div class="col-12 mt-3">
+            <div class="row">
+                {% for post in object_list %}
+                <div class="col-md-3 sm-2 mb-5">
+                    <div class="card mx-auto ">
+                        <a href="{% url 'album_reviews' post.slug %}"><div class="card-body review-card mb-5">
+                            <div class="image-container ">
+                                {% if "placeholder" in post.album_image.url  %}
+                                <img class="card-img-top"
+                                    src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ post.album_image.url }}">
+                                {% endif %}
+                            </div></a>
+                            <div class="card-body">
+                                <h4 class="card-title text-center"><a href="{% url 'album_reviews' post.slug %}">{{ post.artist}}</h4></a>
+                                <a href="{% url 'album_reviews' post.slug  %}"><h5 class="text-center">{{ post.album_title}}</h5></a>
+                            </div>
+                
+                            <ul class=" mt-2 list-group list-group-flush">
+                                <li class="list-group-item text-center">Genre: {{post.genre}}</li>
+                                <li class="list-group-item text-center">Album Score: {{post.album_score}}</li>    
+                                <li class="list-group-item text-center">Author: {{post.author}}</li>
+                                <button type="button"  class="btn btn-link btn-sm"><a href="{% url 'album_reviews' post.slug %}"> Read Review</a></button>
+                                {% if user.is_authenticated %}
+                                {% if user.id == post.author.id %}
+                                    <div class="row">
+                                        <div class="col-sm-12 text-center">
+                                            <button type="button"  class="btn btn-success btn-sm"><a href="{% url 'edit_post' post.slug %}"> Edit</a></button>
+                                            <button type="button"  class="btn btn-danger btn-sm"><a href="{% url 'delete_post' post.slug %}"> Delete</a></button>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
 {% endif %}
 {%endblock%}
