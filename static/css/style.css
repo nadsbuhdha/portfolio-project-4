@@ -14,6 +14,8 @@ p {
 }
 
 
+
+
 /* review card styling */ 
 
 .card-img-top {
@@ -63,3 +65,25 @@ main a {
 /* button styling */
 
 .page-link { border-radius: 10px}
+
+/*  account log in and out styling   */
+
+.acdetails {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+
+
+ .footer a :hover {
+    transform: scale(1.2)
+}
+
+/* media queries */ 
+
+@media (max-width: 767px) {
+    .card {
+        width: 50%
+    }
+}
+
