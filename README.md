@@ -12,7 +12,7 @@ The purpose of this website is to deliver a blog-style music site which allows u
 
 The main goal of this website was to deliver CRUD functionality to a blog-style review site. Users can create, read update and delete their own reviews. As well as creating their own reviews they can comment on other's psots and 'like' the posts. 
 
-### User Goals/Stories 
+### User Goals 
 
 ### User
 As a site user I can register account so that I can interact with site content.
@@ -48,13 +48,35 @@ As a site admin I can approve or disapprove user uploaded content so that I can 
 ## User Expectations 
 As there is a specific target audience, music enthusiasts, for this website the following user expectations were considered when creating the site:
 
-The site is simple, clear and easy to use.
-The structure is logical and obvious.
-The site is responsive and users can expect to see the same content on different devices without a reduction in quality.
-The media content is relevant to the albums listed
-There ability for users to easily navagate the website and search for a specific review. 
-Users can cleary read and interact with the website and the reviews. 
+* The site is simple, clear and easy to use.
+* The structure is logical and obvious.
+* The site is responsive and users can expect to see the same content on different devices without a reduction in quality.
+* The media content is relevant to the albums listed
+* There ability for users to easily navagate the website and search for a specific review. 
+* Users can cleary read and interact with the website and the reviews. 
 
+## User Stories 
+
+* Upload pics
+
+## Strategy 
+
+In order to create a site which is relevant to its target auidence, various other related website were researched first in order to comprehensively analyse the features which would be necessary. 
+
+| Feature        | Importance   | Viability |
+| ------------- |:-------------:| -----:|
+| Display a list of album reivews     | 5 | 5  |
+| open a specific album review      | 5      |   5 |
+| User sign up | 5      |    5 |
+| User CRUD functionality | 5      |    5 |
+| User can draft posts | 4      |    5 |
+| paginate list of reviews | 5      |    5 |
+| Responsive design | 5      |    5 |
+| User comments | 4      |    4 |
+| User likes / unlikes | 3      |    4 |
+| Admin approval of comments | 4      |    5 |
+| Users can search for content | 3      |    4 |
+| Users have a page of their own content | 2      |    3 |
 
 
 
