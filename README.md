@@ -106,14 +106,47 @@ Andada Pro was chosen at the primary font choice throughout the website. After e
 
 ### Nav Bar 
 
+Every page of the site contain a navigation bar with links to different pages of the site. Each of the links highlight when hovered over to indicate what the user is about to click on. The page which the user is on is highlighed on the navigation bar. The navagation links differ depending if the user is logged in and authenticated or not logged in. 
 
+When logged out the nav bar displays a 'log in' and 'register' link. 
 ![logged out navbar](documentation_assets/images/nav_bar_logged_out.png)
 
 
+When the user is logged in the nav bar displays the links 'write a post' 'your posts' and 'log out'
+
+![logged in navbar](documentation_assets/images/loggedin_in_nav.png)
 
 
+Users can use the seach bar to search the site for a specific album review. 
+![search bar](documentation_assets/images/search.png)
 
 
+### Footer
+
+The footer features on each page. Footer icon links enlarge when hovered over and links open in a seperate page as to note pull the user away from the site.
+![footer](documentation_assets/images/footer .png)
+
+### Homepage 
+
+The home page features a hero image with a short overview of what the sebsite is about. 
+![Hero Image](documentation_assets/images/heroimage.png)
+
+
+The home page features the latest 4 reviews uploads. 
+![Home Page Reviews](documentation_assets/images/homepage_lr.png)
+
+### Account pages
+
+When a user clicks on the log in page they are asked to sign in with their username and password
+
+![sign in](documentation_assets/images/signin.png)
+
+When a user selects the register they are presented with a registrated form with an option email form detail. 
+
+![Register](documentation_assets/images/register.png)
+
+Whilst signed in, users can logg out by clicking on the sign out link which will ask users to confirm signing out 
+![Signout](documentation_assets/images/signout.png)
 
 
 
