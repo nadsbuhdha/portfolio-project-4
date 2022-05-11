@@ -6,9 +6,8 @@ The Lost Tapes is a website dedicated to music album reviews. The Lost Tapes giv
 
 The purpose of this website is to deliver a blog-style music site which allows users to create, read, update, and delete reviews. The target auidence for this site is people who are interested in music and would like to read and share the opinions of others on album releases. 
 
-### Strategy
 
-#### Project Goals 
+### Project Goals 
 
 The main goal of this website was to deliver CRUD functionality to a blog-style review site. Users can create, read update and delete their own reviews. As well as creating their own reviews they can comment on other's psots and 'like' the posts. 
 
@@ -37,11 +36,7 @@ As a user I can add comments to a post so that I can be involved in discussion.
 As a user I can search the website for a post so that I can quickly find whether the site has the post I am looking for.
 
 
-
-
-
-
-# Admin 
+### Admin 
 As a site admin I can approve or disapprove user uploaded content so that I can manage site content.
 
 
@@ -77,6 +72,46 @@ In order to create a site which is relevant to its target auidence, various othe
 | Admin approval of comments | 4      |    5 |
 | Users can search for content | 3      |    4 |
 | Users have a page of their own content | 2      |    3 |
+
+
+## Structure 
+
+** Come back to 
+
+### Database Model
+
+* add images 
+
+
+### Final database 
+
+
+## Design 
+
+### Wireframes 
+
+• add wireframe images
+
+
+### Colour Schemes
+
+During the inital design phase, I researched a variety of music review based websites. A common theme across the websites is their commitment to netrual and simplified colour schemes. I adapted this approach when designing my site. The reasoning for this choice is that when users upload album artwork, it can  be in a variety of different colours and styles which could potentially clash with an over exhuberant colour scheme design choice. Keeping a sleek, schematic colour scheme minimises any potential clashes with user uploaded image content and keeps the site asthetically pleasing for the user. White, black and sublte grey on the footer and header were used to keep the colour schemes formularized. 
+
+### Fonts
+
+Andada Pro was chosen at the primary font choice throughout the website. After experimenting with a variety of fonts, Andada Pro provided sleek serif typography which complimented the overall professional, yet calm asthetic of the website. San-serif was chosen as a backup font, should Andada Pro fail. 
+
+
+# Features 
+
+### Nav Bar 
+
+
+![logged out navbar](documentation_assets/images/nav_bar_logged_out.png)
+
+
+
+
 
 
 
