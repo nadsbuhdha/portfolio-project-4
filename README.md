@@ -149,6 +149,35 @@ Whilst signed in, users can logg out by clicking on the sign out link which will
 ![Signout](documentation_assets/images/signout.png)
 
 
+### Add Review Page
+
+When user is logged in they can add their own review. They are presented with a form where they can input: Album title, artist, genre, an album image, their score out of 10 and their review. Users also have the option to publish straight away or to draft the post and return to it later. The slug for the post is automatically generated so the user does not have the option to decide their own slug. 
+
+![review page](documentation_assets/images/add_review_one.webp)
+
+For the review body, crispy forms was added so users can have some autonomy on the presentation of their review. Some aspects of cirspy forms were removed from the user however, such as the ability to add images into the body in order to keep the form congruent. 
+![review page](documentation_assets/images/add_review_two.webp)
+
+### Your posts 
+
+Once signed in, users have the ability to navagate to a page which holds all of their reviews on. From here users, can see all of their posts; published or unpublished.
+![Your posts page](documentation_assets/images/your_posts.webp)
+
+Users can manage their posts here by edit and delete buttons.
+ 
+![edit and delete buttons](documentation_assets/images/edit_delete.webp)
 
 
+### Edit & Delete Posts
 
+Users can edit their posts either published or unpublished. 
+![Edit Post](documentation_assets/images/your_posts.webp)
+
+
+If a user clicks on 'delete posts' they will be asked again to ensure they want to delete the posts where a larger delete button will appear. Once they click delete again the post will be deleted. 
+![Delete Post](documentation_assets/images/delete_post.webp)
+
+### Search Posts
+
+Users can ultilise the search bar to search the site for reviews. If the searched word appears in the album title or the artist name, the post will be displayed. 
+![Search Post](documentation_assets/images/search_posts.webp)
