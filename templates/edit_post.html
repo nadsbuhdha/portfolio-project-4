@@ -7,7 +7,7 @@
         <h2 class="text-center page_title">Edit </h2>
     </div>
     <div class=" container form-group p-4 create-form">
-        <form method="POST" >
+        <form method="POST" enctype="multipart/form-data" >
         {% csrf_token %}
         {{form.as_p}}
         <button class="btn btn-dark">Post</button>
