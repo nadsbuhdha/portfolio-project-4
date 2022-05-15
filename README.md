@@ -235,3 +235,46 @@ If a user clicks on 'delete posts' they will be asked again to ensure they want 
 
 Users can ultilise the search bar to search the site for reviews. If the searched word appears in the album title or the artist name, the post will be displayed. 
 ![Search Post](documentation_assets/images/search_posts.webp)
+
+# Testing
+
+### Google developer tools
+Google chrome developer tools were utilised throughout the building of this website. Elements on the page were maniuplated through the google developer tools and then implemented permanently 
+
+### Manual Testing
+Different browsers were used to test the site to ensure cross compatibility including :
+
+* Safari
+* Firefox
+* Googlechrome
+
+
+Manual testing on devices was also undertaken, devices tested include:
+
+* Iphone X
+* Ipone 11
+* Ipad
+* Huawei p30
+
+## Feature Testing 
+
+### Navagation  
+
+| Feature        | Test    | Outcome |
+| ------------- |:-------------:| -----:|
+| Logo   | Does the logo linkback to homepage | PASS  |
+| Home Button | Does the home link direct users to home page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  | PASS |
+| Reviews Button | Does the reviews link direct users to reviews page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?    |    PASS |
+| Log In Button | Does the Log in link direct users to Log In page? Does the Log In link only appear when users are logged out ? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  |    PASS|
+| Register | Does the Register link direct users to Register page? Does the Register link only appear when users are logged out ? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?      |    PASS |
+| Search Bar | Can user use key words       |    PASS |
+
+
+### Footer 
+| Feature        | Test    | Outcome |
+| ------------- |:-------------:| -----:|
+| Facebook   | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ? | PASS  |
+| Twitter | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
+| YouTube | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
+| Instagram | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
+
