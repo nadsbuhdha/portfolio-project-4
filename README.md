@@ -90,7 +90,61 @@ In order to create a site which is relevant to its target auidence, various othe
 
 ### Wireframes 
 
-• add wireframe images
+Before building the site, Balsamiq was utilised to create wireframes of the site. Wireframes were created in order to develop the websites asthetic and to give an impression of the responsive style across different platforms. 
+
+#### Desktop Homepage 
+![desktop Homepage](documentation_assets/wireframes/homepage_desktop.webp)
+
+#### Desktop All Reviews Page
+![desktop Review Page](documentation_assets/wireframes/reviewpage_desktop.webp)
+
+#### Desktop Album Reviews Page
+![album review page](documentation_assets/wireframes/album_review.webp)
+
+#### Desktop Add Review Page
+![desktop add review page](documentation_assets/wireframes/add_review.webp)
+
+#### Desktop Edit review Page
+![desktop edit review page](documentation_assets/wireframes/edit_review.webp)
+
+#### Desktop Delete Review 
+![desktop delete review](documentation_assets/wireframes/delete_review.webp)
+
+#### Desktop Sign In  
+![desktop sign in page](documentation_assets/wireframes/sign_in.webp)
+
+#### Desktop Sign Up
+![desktop sign up](documentation_assets/wireframes/sign_up.webp)
+
+#### Desktop Sign Out
+![desktop sign out](documentation_assets/wireframes/sign_out.webp)
+
+#### Mobile Home Page
+![mobile home page](documentation_assets/wireframes/mob_home.webp)
+
+#### Mobile All Review Page
+![mobile review page](documentation_assets/wireframes/mob_review.png)
+
+#### Mobile Review Detail Page
+![mobile review detail page](documentation_assets/wireframes/mob_review_details.webp)
+
+#### Mobile Add Review 
+![mobile add reivew](documentation_assets/wireframes/mob_add_review.webp)
+
+#### Mobile Edit Review
+![mobile edit review](documentation_assets/wireframes/mob_edit_review.webp)
+
+#### Mobile Delete Review
+![mobile delete review](documentation_assets/wireframes/mob_delete.webp)
+
+#### Mobile Sign In 
+![mobile sign in review](documentation_assets/wireframes/mob_sign_in.webp)
+#### Mobile Sign Up
+![Mobile Sign Up](documentation_assets/wireframes/sign_up.webp)
+
+#### Mobile Sign Out
+![Mobile Sign Out](documentation_assets/wireframes/mob_signout.webp)
+
 
 
 ### Colour Schemes
