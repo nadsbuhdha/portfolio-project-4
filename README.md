@@ -272,7 +272,7 @@ Manual testing on devices was also undertaken, devices tested include:
 
 ### Footer 
 | Feature        | Test    | Outcome |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|
 | Facebook   | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ? | PASS  |
 | Twitter | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
 | YouTube | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
