@@ -261,13 +261,13 @@ Manual testing on devices was also undertaken, devices tested include:
 ### Navagation  
 
 | Feature        | Test    | Outcome |
-| ------------- |:-------------:| -----:|
+| ------------- |-------------| -----|
 | Logo   | Does the logo linkback to homepage | PASS  |
 | Home Button | Does the home link direct users to home page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  | PASS |
 | Reviews Button | Does the reviews link direct users to reviews page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?    |    PASS |
 | Log In Button | Does the Log in link direct users to Log In page? Does the Log In link only appear when users are logged out ? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  |    PASS|
 | Register | Does the Register link direct users to Register page? Does the Register link only appear when users are logged out ? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?      |    PASS |
-| Search Bar | Can user use key words       |    PASS |
+| Search Bar | Can user use key words to search for a post?      |    PASS |
 
 
 ### Footer 
