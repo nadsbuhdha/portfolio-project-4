@@ -20,7 +20,7 @@
           <h5 class="card-title">{{post.album_title}}</h5>
           <p class="card-text">{{post.artist}}</p>
           <p class="card-text">{{post.genre}}</p>
-          <p class="card-text">{{post.album_score}}</p>
+          <p class="card-text" id="review_score">{{post.album_score}}</p>
           <p class="card-text">    {% if user.is_authenticated %}
             <form action="{% url 'post_like'  post.slug %}" class="d-inline" method="POST">
                 {% csrf_token %}
