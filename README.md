@@ -345,3 +345,28 @@ Manual testing on devices was also undertaken, devices tested include:
 | Search results | Are results which include the users searched words in the title or artist displayed ?  | PASS |
 | case sensitivity | Are the search results non-case-sensitive so the results display irrespective of uppercase or lowercase ?  | PASS |
 | Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+
+# Validation 
+
+* Come back to this section 
+
+# Bugs 
+
+## Solved bugs
+
+* Initally, the 'edit' page did not allow me to update the image field from the already previously set image. This bug was solved by adding a 'enctype="multipart/form-data' to the form which solved the bug. 
+
+* When connecting URLS my 'create post' page would not route to the page. Instead a 404 error message would be displayed. This was solved by rearraging the order of the URLS. 
+
+The 'create post' url was put above the 'slug' url to solve this issue. 
+![url bug](documentation_assets/images/url_bug.webp) 
+
+* When connecting summernote to the 'body' of the create/edit album review, the sizing did not match rest of the formatting of the page. When reading the documentation I discovered this bug was solved by adapting the summernote configuration in the settings. 
+![summernote bug](documentation_assets/images/summer_note.webp)
+
+
+* When bulding the comment section on my site, I recieved an IntegrityError when trying to post a comment. This bug was caused by a missing line of code in the views.py file
+
+This bug was solved by adding this line into the views file. 
+![comment bug](documentation_assets/images/comment_bug.webp)
