@@ -278,3 +278,70 @@ Manual testing on devices was also undertaken, devices tested include:
 | YouTube | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
 | Instagram | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
 
+
+### Home page
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Hero Image   | Is the hero image responsive on multiple devices? | PASS  |
+| Album reviews | Are they a maximum of 4 album reviews displayed which are responsive to different devices  | PASS |
+| Heading & Paragraphs | Are the headings and paragraphs responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Review Page 
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Album reviews | Are they a maximum of 8 album reviews displayed which paginated onto a new page once reached the maximum and are responsive to different devices   | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Sign In Page 
+
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Sign up form | Can users sign in using their registered details? Is the form responsive on multiple devices ?   | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Sign Up Page 
+
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Sign up form | Can users register to sign up with a user name and the option of adding an email address? Is the form responsive on multiple devices ?   | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+
+### Sign Out Page 
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Sign Out |Can users sign out ? Are users redirected to the home page once signed out?   | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+
+### Write a review page  
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Review Form | Can users add their own album title, artist, genre, image, and text ? | Pass |
+| Summernote body | Is summernote utilised for the body of the review?  | PASS |
+| Publish / draft | Can a user decide to draft or publish their post ? | PASS |
+| Slug | Is a slug automatically generated? | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Edit a review page  
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Review Form | Can users edit their own album title, artist, genre, image, and text ? Is the previous data inputted from the user still visible? | Pass |
+| Summernote body | Is summernote utilised for the body of the review?  | PASS |
+| Publish / draft | Can a user decide to draft or publish their post ? | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Delete a review  
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Review Form | Can users delete their reivew? | Pass |
+| Warning | Are users asked a second time whether they want to delete their post ?  | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
+
+### Search Page
+| Feature        | Test    | Outcome |
+| ------------- |-------------| -----|
+| Search Bar | Can users, use key words to search for a review ? | Pass |
+| Search results | Are results which include the users searched words in the title or artist displayed ?  | PASS |
+| case sensitivity | Are the search results non-case-sensitive so the results display irrespective of uppercase or lowercase ?  | PASS |
+| Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
