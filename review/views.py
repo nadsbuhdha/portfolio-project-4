@@ -7,6 +7,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import AlbumReview
 from .forms import ReviewForm, EditForm, CommentForm
 from django.db.models import Q
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
 
 # Create your views here.
 
@@ -93,30 +95,42 @@ class FullReview(View):
     
 
 
-class AddPost(CreateView):
+class AddPost(SuccessMessageMixin, CreateView):
     model = AlbumReview
     form_class = ReviewForm
     template_name = 'create_post.html'
+    success_url = reverse_lazy('home')
+    if 'status' == 1:
+        success_message = 'Your post was published'
+    else:
+        success_message = 'Your post was drafted'
     
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
-    # fields = ['album_title', 'artist', 'genre', 
-    # 'album_image', 'album_score', 'body', 'status', 'author', 'slug']
+    
 
 
-class EditPost(UpdateView):
+class EditPost(SuccessMessageMixin, UpdateView):
     model = AlbumReview
     form_class = EditForm
     template_name = 'edit_post.html'
-    # fields = ['album_title', 'artist', 'genre', 
-    # 'album_image', 'album_score', 'body', 'status']
+    success_url = reverse_lazy('home')
+    if 'status' == 1:
+        success_message = 'Your post was published'
+    else:
+        success_message = 'Your post was updated'
+    
 
-
-class DeletePost(DeleteView):
+class DeletePost(SuccessMessageMixin, DeleteView):
     model = AlbumReview
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
+    success_message = 'Your post was deleted'
+    def delete(self, request, *args, **kwargs):
+        messages.warning(self.request, self.success_message)
+        return super(DeletePost, self).delete(request, *args, **kwargs)
+    
 
 class LikePost(View):
     def post (self, request, slug):

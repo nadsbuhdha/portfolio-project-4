@@ -54,6 +54,14 @@
           </div>
         </div>
       </nav>
+      {% if messages %}
+      {% for message in messages %}
+          <div class="text-center alert alert-{{ message.tags }} mb-0" id="message_alerts">
+              {{ message |safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+      {% endfor %}
+      {% endif %}
 <!-- Hero Image-->
 <img id="hero-image" class="img-fluid" src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650298416/pexels-stas-knop-1461608_crop_p7almb.jpg" alt ="cassette tapes">
     <main>
