@@ -14,7 +14,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 
 class IndexPage(generic.ListView):
     model = AlbumReview
-    queryset = AlbumReview.objects.filter(status=1).order_by('-date_created')
+    queryset = AlbumReview.objects.filter(status=1, approved=True).order_by('-date_created')
     template_name = 'index.html'
     paginate_by = '4'
 
@@ -100,10 +100,7 @@ class AddPost(SuccessMessageMixin, CreateView):
     form_class = ReviewForm
     template_name = 'create_post.html'
     success_url = reverse_lazy('home')
-    if 'status' == 1:
-        success_message = 'Your post was published'
-    else:
-        success_message = 'Your post was drafted'
+    success_message = 'Your post was created'
     
     def form_valid(self, form):
         form.instance.author = self.request.user
@@ -116,10 +113,7 @@ class EditPost(SuccessMessageMixin, UpdateView):
     form_class = EditForm
     template_name = 'edit_post.html'
     success_url = reverse_lazy('home')
-    if 'status' == 1:
-        success_message = 'Your post was published'
-    else:
-        success_message = 'Your post was updated'
+    success_message = 'Your post was updated'
     
 
 class DeletePost(SuccessMessageMixin, DeleteView):
@@ -147,7 +141,7 @@ def search(request):
     if request.method == "POST":
         searched = request.POST['searched']
         paginate_by = '8'
-        reviews = AlbumReview.objects.filter(Q(album_title__icontains=searched) | Q(artist__icontains=searched, status = 1))
+        reviews = AlbumReview.objects.filter(Q(album_title__icontains=searched) | Q(artist__icontains=searched, status=1))
         return render(request, 'search.html',   {'searched': searched, 'reviews': reviews, })
     else:
         return render(request, 'search.html', {})

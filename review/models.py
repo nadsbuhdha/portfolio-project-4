@@ -20,7 +20,7 @@ class AlbumReview(models.Model):
     album_image = CloudinaryField('image', default='placeholder')
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='review_auth')
     album_score = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(10)]) # noqa
-    approved = models.BooleanField(default=False)
+    approved = models.BooleanField(default=True)
     body = models.TextField(default='Add your review here')
     
     
