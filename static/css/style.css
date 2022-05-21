@@ -78,6 +78,13 @@ main a {
 
 .page-link { border-radius: 10px}
 
+
+
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*  account log in and out styling   */
 
 .acdetails {

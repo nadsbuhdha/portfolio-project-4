@@ -21,7 +21,7 @@ class IndexPage(generic.ListView):
 
 class ReviewPage(generic.ListView):
     model = AlbumReview
-    queryset = AlbumReview.objects.filter(status=1).order_by('-date_created')
+    queryset = AlbumReview.objects.filter(status=1, approved=True).order_by('-date_created')
     template_name = 'reviews.html'
     paginate_by = '8'
 
@@ -141,10 +141,7 @@ def search(request):
     if request.method == "POST":
         searched = request.POST['searched']
         paginate_by = '8'
-        reviews = AlbumReview.objects.filter(Q(album_title__icontains=searched) | Q(artist__icontains=searched, status=1))
+        reviews = AlbumReview.objects.filter(Q(album_title__icontains=searched) | Q(artist__icontains=searched, status=1), approved=True)
         return render(request, 'search.html',   {'searched': searched, 'reviews': reviews, })
     else:
         return render(request, 'search.html', {})
-        
-
-
