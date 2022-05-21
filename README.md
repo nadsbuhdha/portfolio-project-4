@@ -52,7 +52,20 @@ As there is a specific target audience, music enthusiasts, for this website the 
 
 ## User Stories 
 
-* Upload pics
+user stories were utilised throughout to manage features. Features were implemented based on the to do - in progress - done structure. 
+
+
+User stories were produced to guide each feature stage of the site.
+![user stories to do ](documentation_assets/images/inital_user_story.webp)
+
+
+Whilst a feature was being worked on, it was moved to the 'in progress' section
+![user stories in progress](documentation_assets/images/inprogressus.webp)
+
+
+Once a feature was completed, it was moved over to the done section 
+![user stories in progress](documentation_assets/images/doneus.webp)
+
 
 ## Strategy 
 
@@ -80,10 +93,16 @@ In order to create a site which is relevant to its target auidence, various othe
 
 ### Database Model
 
-* add images 
+Planned database model 
+
+![database model sketch](documentation_assets/images/databasemodelsketch.webp)
 
 
-### Final database 
+Final database model 
+
+![final dataebase model](documentation_assets/images/finaldatabase.webp)
+
+![final dataebase model2](documentation_assets/images/finaldatabasesecond.webp)
 
 
 ## Design 
@@ -235,6 +254,24 @@ If a user clicks on 'delete posts' they will be asked again to ensure they want 
 
 Users can ultilise the search bar to search the site for reviews. If the searched word appears in the album title or the artist name, the post will be displayed. 
 ![Search Post](documentation_assets/images/search_posts.webp)
+
+### Messaging 
+
+When users perform certain actions on the site, they will be informed via messaging so it is explicity stated what action they have just performed. 
+
+Creating a new post 
+![creating a new post](documentation_assets/images/create_message.png)
+
+Updating a post 
+![updating new post](documentation_assets/images/update_message.png)
+
+Deleting a post 
+
+![deleting a post](documentation_assets/images/delete_message.png)
+
+
+signing in 
+![signing in](documentation_assets/images/sign_in_message.png)
 
 # Testing
 
