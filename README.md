@@ -410,9 +410,43 @@ Sign Up Page
 ![Sign Up validation](documentation_assets/images/signuppage.png)
 * Come back to this section 
 
+
+### CSS
 The CSS passed through the validator without any issues.
 
 ![Main review page](documentation_assets/images/cssvalidator.png)
+
+### Python validation
+
+PEP8 Validator was used to check for errors within the python files. The finalised Python files were error free. 
+
+admin.py Validation
+![admin.py Validation](documentation_assets/images/adminpyvalidation.png)
+
+apps.py Validation
+![apps.py Validation](documentation_assets/images/appsvalidation.png)
+
+asgi.py Validation
+![asgi.py Validation](documentation_assets/images/asgivalidation.png)
+
+forms.py Validation
+![forms.py Validation](documentation_assets/images/formspyvalidation.png)
+
+urls.py Validation
+![mainurls.py Validation](documentation_assets/images/mainurlsvalidation.png)
+
+models.py Validation
+![models.py Validation](documentation_assets/images/modelspyvalidation.png)
+
+app urls.py Validation
+![urls.py Validation](documentation_assets/images/urlspyvalidation.png)
+
+
+view.py Validation
+![view.py Validation](documentation_assets/images/viewspyvalidation.png)
+
+wisgi.py Validation
+![wisgi.py Validation](documentation_assets/images/wisgi_validation.png)
 
 # Bugs 
 

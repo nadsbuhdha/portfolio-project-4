@@ -155,8 +155,8 @@ def search(request):
     if request.method == "POST":
         searched = request.POST["searched"]
         reviews = AlbumReview.objects.filter(
-            Q(album_title__icontains=searched)
-            | Q(artist__icontains=searched, status=1),
+            Q(album_title__icontains=searched) |
+            Q(artist__icontains=searched, status=1),
             approved=True,
         )
         return render(
