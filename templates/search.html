@@ -17,7 +17,8 @@
                 {% for review in reviews %}
                   <div class="col-md-3 sm-2 mb-5">
                       <div class="card mx-auto ">
-                          <a href="{% url 'album_reviews' review.slug %}"><div class="card-body review-card mb-5">
+                          <div class="card-body review-card mb-5">
+                            <a href="{% url 'album_reviews' review.slug %}">
                               <div class="image-container ">
                                   {% if "placeholder" in review.album_image.url  %}
                                   <img class="card-img-top"
@@ -27,7 +28,7 @@
                                   {% endif %}
                               </div></a>
                               <div class="card-body">
-                                  <h4 class="card-title text-center"><a href="{% url 'album_reviews' review.slug %}">{{ review.artist}}</h4></a>
+                                  <a href="{% url 'album_reviews' review.slug %}"><h4 class="card-title text-center">{{ review.artist}}</h4></a>
                                   <a href="{% url 'album_reviews' review.slug  %}"><h5 class="text-center">{{ review.album_title}}</h5></a>
                               </div>
                   
@@ -35,18 +36,22 @@
                                   <li class="list-group-item text-center">Genre: {{review.genre}}</li>
                                   <li class="list-group-item text-center">Album Score: {{review.album_score}}</li>    
                                   <li class="list-group-item text-center">Author: {{review.author}}</li>
-                                  <button type="button"  class="btn btn-link btn-sm"><a href="{% url 'album_reviews' review.slug %}"> Read Review</a></button>
+                             </ul>
+                             <div class="col-sm-12 text-center">
+                                 <a href="{% url 'album_reviews' review.slug %}"> Read Review</a>
+                            </div>
+                                
                                   {% if user.is_authenticated %}
                                   {% if user.id == review.author.id %}
-                                      <div class="row">
-                                          <div class="col-sm-12 text-center">
-                                              <button type="button"  class="btn btn-success btn-sm"><a href="{% url 'edit_post' review.slug %}"> Edit</a></button>
-                                              <button type="button"  class="btn btn-danger btn-sm"><a href="{% url 'delete_post' review.slug %}"> Delete</a></button>
-                                          </div>
-                                      </div>
+                                  <div class="row mt-3">
+                                    <div class="col-sm-12 text-center">
+                                        <a href="{% url 'edit_post' review.slug %}" class="btn btn-success btn-sm" role="button" > Edit</a>
+                                        <a href="{% url 'delete_post' review.slug %}"  class="btn btn-danger btn-sm" role="button"> Delete</a>
+                                    </div>
+                                </div>
                                   {% endif %}
                                   {% endif %}
-                              </ul>
+                              
                           </div>
                       </div>
                   </div>

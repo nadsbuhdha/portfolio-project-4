@@ -154,7 +154,6 @@ def search(request):
     """ search page """
     if request.method == "POST":
         searched = request.POST["searched"]
-        paginate_by = "8"
         reviews = AlbumReview.objects.filter(
             Q(album_title__icontains=searched)
             | Q(artist__icontains=searched, status=1),

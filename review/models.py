@@ -20,14 +20,15 @@ class AlbumReview(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name="review_likes", blank=True)
+    likes = models.ManyToManyField(
+        User, related_name="review_likes", blank=True)
     album_image = CloudinaryField("image", default="placeholder")
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="review_auth"
     )
     album_score = models.IntegerField(
         validators=[MinValueValidator(0), MaxValueValidator(10)]
-    )  
+    )
     approved = models.BooleanField(default=True)
     body = models.TextField(default="Add your review here")
 

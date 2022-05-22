@@ -52,7 +52,7 @@ As there is a specific target audience, music enthusiasts, for this website the 
 
 ## User Stories 
 
-user stories were utilised throughout to manage features. Features were implemented based on the to do - in progress - done structure. 
+User stories were utilised throughout to manage features. Features were implemented based on the to do - in progress - done structure. 
 
 
 User stories were produced to guide each feature stage of the site.
@@ -88,8 +88,6 @@ In order to create a site which is relevant to its target auidence, various othe
 
 
 ## Structure 
-
-** Come back to 
 
 ### Database Model
 
@@ -386,7 +384,35 @@ Manual testing on devices was also undertaken, devices tested include:
 
 # Validation 
 
+W3C Validator was used to check for error within my HTML code.
+
+The final check presented error free HTML
+
+Index Page
+![index page validation](documentation_assets/images/index_validation.png)
+
+Review Page
+![Review Page Validation](documentation_assets/images/main_review_page.png)
+
+Search Page
+![Search Page Validation](documentation_assets/images/searchpage.png)
+
+Your Posts
+![Your Posts validation](documentation_assets/images/yourposts.png)
+
+Sign In Page
+![Sign In validation](documentation_assets/images/signinpage.png)
+
+Sign Out Page
+![sing out validation](documentation_assets/images/signout_page.png)
+
+Sign Up Page
+![Sign Up validation](documentation_assets/images/signuppage.png)
 * Come back to this section 
+
+The CSS passed through the validator without any issues.
+
+![Main review page](documentation_assets/images/cssvalidator.png)
 
 # Bugs 
 

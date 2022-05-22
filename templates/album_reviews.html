@@ -35,8 +35,8 @@
                 {% endif %}
             </form>
             {% else %}
-            <span class="text-dark"><i class="fas fa-heart"></i> {{ post.num_of_likes }} </span>
-            {% endif %}</p>
+            <span class="text-dark"><i class="fas fa-heart"></i> {{ post.num_of_likes }} </span></p>
+            {% endif %}
           <p class="card-text"><small class="text-muted">{{post.date_created |date:'d-F-Y'}}</small></p>
         </div>
       </div>
@@ -48,16 +48,16 @@
           {{post.body | safe}}
       </p>
       <hr>
-      <p text-center>
+      <p>
         Review by {{post.author}}
       </p>
   </div>
   {% if user.is_authenticated %}
   {% if user.id == post.author.id %}
-      <div class="row"> 
-        <div class="col-sm-12 text-center">
-          <button type="button"  class="btn btn-success btn-sm"><a href="{% url 'edit_post' post.slug %}"> Edit</a></button>
-          <button type="button"  class="btn btn-danger btn-sm"><a href="{% url 'delete_post' post.slug %}"> Delete</a></button>
+      <div> 
+        <div class="text-center">
+            <a href="{% url 'edit_post' post.slug %}" class="btn btn-success btn-sm" role="button" > Edit</a>
+            <a href="{% url 'delete_post' post.slug %}"  class="btn btn-danger btn-sm" role="button"> Delete</a>
         </div>
       </div>
   {% endif %}
