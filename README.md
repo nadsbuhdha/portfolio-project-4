@@ -448,6 +448,80 @@ view.py Validation
 wisgi.py Validation
 ![wisgi.py Validation](documentation_assets/images/wisgi_validation.png)
 
+
+## Lighthouse validation
+
+Lighthouse was utilised to test the performance, accessibility, best practices and SEO of the website. Both desktop and mobile were tested. On mobile testing, pages with summernote the performance was downgraded. 
+
+Home page validation desktop 
+![Home page validation desktop](documentation_assets/lighthouse/homepage_desktop.png)
+
+
+Home page validation mobile 
+
+![Home page validation mobile](documentation_assets/lighthouse/homepage_mob.png)
+
+Review page validation desktop
+![Review page validation desktop](documentation_assets/lighthouse/reviewspage_desktop.png)
+
+Review page validation mobile
+![Review page validation mobile](documentation_assets/lighthouse/register_mob.png)
+
+Your Posts validation desktop
+![Your Posts validation desktop](documentation_assets/lighthouse/yourposts_desktop.png)
+
+Your Posts validation mobile
+![Your Posts validation mobile](documentation_assets/lighthouse/yourposts_mob.png)
+
+Main Review Page Desktop
+![Your Posts validation mobile](documentation_assets/lighthouse/mainreview_desktop.png)
+
+
+Main Review Page Mobile 
+![Your Posts validation mobile](documentation_assets/lighthouse/mainrevew_mob.png)
+
+Search Page Desktop
+![Search Page Desktop](documentation_assets/lighthouse/searchpage_desktop.png)
+
+Search Page Mobile
+![Search Page Mobile](documentation_assets/lighthouse/search_mob.png)
+
+Write Review desktop
+![Write Review desktop](documentation_assets/lighthouse/writereview_desktop.png)
+
+Write Review mobile
+![Write Review mobile](documentation_assets/lighthouse/write_review_mob.png)
+
+Edit Review desktop
+![Edit Review desktop](documentation_assets/lighthouse/edit_review_desktop.png)
+
+Edit Review mobile 
+![Edit Review mobile](documentation_assets/lighthouse/edit_review_mob.png)
+
+Delete Review Desktop
+![Delete Review Desktop](documentation_assets/lighthouse/delete_page_desktop.png)
+
+Delete Review Mobile
+![Delete Review Mobile](documentation_assets/lighthouse/delete_page_mob.png)
+
+Sign in Desktop
+![sign in Desktop](documentation_assets/lighthouse/signin_desktop.png)
+
+Sign in Mobile
+![sign in Mobile](documentation_assets/lighthouse/sign_in_mob.png)
+
+Sign out Desktop
+![sign out desktop](documentation_assets/lighthouse/signout_desktop.png)
+
+Sign out mobile
+![sign out mobile](documentation_assets/lighthouse/signout_desktop.png)
+
+Register Page Desktop
+![Register Page Desktop](documentation_assets/lighthouse/register_desktop.png)
+
+Register Page Mobile
+![Register Page Mobile](documentation_assets/lighthouse/register_mob.png)
+
 # Bugs 
 
 ## Solved bugs
