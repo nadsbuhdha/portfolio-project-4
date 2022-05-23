@@ -541,3 +541,7 @@ The 'create post' url was put above the 'slug' url to solve this issue.
 
 This bug was solved by adding this line into the views file. 
 ![comment bug](documentation_assets/images/comment_bug.webp)
+
+
+* When validating the HTML I recieved multiple a tag errors from an improper nesting of the a tag. This bug was resolved by correctly nesting tags inside of the a tag. 
+![a tag error](documentation_assets/images/validationbug.png)
