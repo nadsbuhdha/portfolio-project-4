@@ -39,6 +39,8 @@ As a user I can search the website for a post so that I can quickly find whether
 ### Admin 
 As a site admin I can approve or disapprove user uploaded content so that I can manage site content.
 
+As a site admin I can delete posts so that I can manage website content.
+
 
 ## User Expectations 
 As there is a specific target audience, music enthusiasts, for this website the following user expectations were considered when creating the site:
@@ -545,3 +547,73 @@ This bug was solved by adding this line into the views file.
 
 * When validating the HTML I recieved multiple a tag errors from an improper nesting of the a tag. This bug was resolved by correctly nesting tags inside of the a tag. 
 ![a tag error](documentation_assets/images/validationbug.png)
+
+* When deploying the project to heroku, the project displayed an application error. 
+This was due to the slugger module not being updated in the requirements.txt file. This bug was solved by updating the requirement.txt file.
+
+![app error](documentation_assets/images/apperror.png)
+
+
+# Deployment 
+
+Gitpod workspace was used to develop this project, utilising the code institute template. The project was commited and pushed to github. 
+
+### Heroku
+
+In order to deploy to heroku the following steps were taken 
+
+* Created a new app in Heroku
+* created a unique name and location for the app 
+* attached heroku postgres for the project database
+* DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were added to the config vars
+* DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were then added and updated in the settings.py file
+* Once project was ready for heroku deployment the debug was set to false in the settings.py file
+* As heroku has disabled automated deployments at the time of deyployment, the terminal was used to deploy the project. 
+* The follwing terminal inputs were used. heroku login -i , heroku git:remote -a he-lost-tapes-p4, git add . && git commit -m "Deploy to Heroku", git push origin main, git push heroku main
+*
+
+
+# Finished Product
+
+### Home Page
+![home page](documentation_assets/images/finished_home_page.png)
+![home page](documentation_assets/images/finished_home_page_2.png)
+
+### Review Page 
+![Review Page](documentation_assets/images/finished_album_reviews_1.png)
+![Review Page](documentation_assets/images/finished_album_reviews_2.png)
+
+### Your Reviews Page 
+
+![Your Reviews](documentation_assets/images/finished_your_reviews_page.png)
+
+
+### Full Review Page
+
+![Full Review](documentation_assets/images/finished_full_review_1.png)
+![Full Review](documentation_assets/images/finished_full_review_2.png)
+
+### Search Page
+![Search Page](documentation_assets/images/finished_search.png)
+Search with no words entered 
+![Search Page](documentation_assets/images/finished_search_nowords.png)
+
+### Add new review page 
+![Add new review page](documentation_assets/images/finished_write_post_1.png)
+![Add new review page](documentation_assets/images/finished_write_post_2.png)
+
+### Edit Post
+![Edit Post](documentation_assets/images/finished_edit_1.png)
+![Edit Post](documentation_assets/images/finished_edit_1.png)
+
+### Delete Post
+![Delete Post](documentation_assets/images/finished_delete_post.png)
+
+### Sign In Page 
+![Sign In](documentation_assets/images/finished_signin.png)
+
+### Sign Out Page
+![Sign Out](documentation_assets/images/finished_signout.png)
+
+### Sign Up Page
+![Sign Up](documentation_assets/images/finished_signup.png)
