@@ -480,6 +480,9 @@ view.py Validation
 wisgi.py Validation
 ![wisgi.py Validation](documentation_assets/images/wisgi_validation.png)
 
+Settings.py Validation
+On the pep8 validation, the settings.py showed these specific errors however I decided not to alter with the settings files already loaded as they are important files. 
+![wisgi.py Validation](documentation_assets/images/settingspy_pep.png)
 
 ## Lighthouse validation
 

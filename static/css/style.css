@@ -108,7 +108,7 @@ a, a:hover, a:focus, a:active {
 }
 
 .reviewbox a:hover {
-    color: rgb(200, 99, 195);
+    color: rgb(205, 184, 204);
     transform: scale(1.2)
 }
 
