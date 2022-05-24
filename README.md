@@ -577,6 +577,9 @@ This was due to the slugger module not being updated in the requirements.txt fil
 
 ![app error](documentation_assets/images/apperror.png)
 
+* When users tried to register with an email account a service 500 error was displayed.
+This bug was solved by adding ACCOUNT_EMAIL_VERIFICATION = "none" to the settings.py file 
+
 
 # Deployment 
 
