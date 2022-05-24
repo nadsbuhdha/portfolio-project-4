@@ -1,15 +1,17 @@
 # The Lost Tapes
 
-The Lost Tapes is a website dedicated to music album reviews. The Lost Tapes gives user to read album reviews, write their own album reviews, edit and delete their reviews. Users can also interact with each other in the comment section allowing a community driven ethos which permiates throughout the site. The lost tapes is virtual world where music lovers can share their takes on the latest, or classic, albums and discuss their views and opiniosn on released albums. 
+![am i responsive site](documentation_assets/images/amiresponsive.png)
+
+The Lost Tapes is a website dedicated to music album reviews. The Lost Tapes gives the user the ability to read album reviews, write their own album reviews, edit and delete their reviews. Users can also interact with each other in the comment section allowing a community driven ethos which permeates throughout the site. The lost tapes is virtual world where music lovers can share their takes on the latest, or classic, albums and discuss their views and opinion on released albums. 
 
 ## UX 
 
-The purpose of this website is to deliver a blog-style music site which allows users to create, read, update, and delete reviews. The target auidence for this site is people who are interested in music and would like to read and share the opinions of others on album releases. 
+The purpose of this project is to deliver a blog-style music site which allows users to create, read, update, and delete reviews. The target audience for this site is people who are interested in music and would like to read and share the opinions of others on album releases. 
 
 
 ### Project Goals 
 
-The main goal of this website was to deliver CRUD functionality to a blog-style review site. Users can create, read update and delete their own reviews. As well as creating their own reviews they can comment on other's psots and 'like' the posts. 
+The main goal of this website was to deliver CRUD functionality to a blog-style review site. Users can create, read update and delete their own reviews. As well as creating their own reviews they can comment on other's posts and 'like' the posts. 
 
 ### User Goals 
 
@@ -49,8 +51,9 @@ As there is a specific target audience, music enthusiasts, for this website the 
 * The structure is logical and obvious.
 * The site is responsive and users can expect to see the same content on different devices without a reduction in quality.
 * The media content is relevant to the albums listed
-* There ability for users to easily navagate the website and search for a specific review. 
-* Users can cleary read and interact with the website and the reviews. 
+* There ability for users to easily navigate the website and search for a specific review. 
+* Users can clearly read and interact with the website and the reviews.   
+
 
 ## User Stories 
 
@@ -66,7 +69,7 @@ Whilst a feature was being worked on, it was moved to the 'in progress' section
 
 
 Once a feature was completed, it was moved over to the done section 
-![user stories in progress](documentation_assets/images/doneus.webp)
+![user stories done](documentation_assets/images/doneus.webp)
 
 
 ## Strategy 
@@ -75,7 +78,7 @@ In order to create a site which is relevant to its target auidence, various othe
 
 | Feature        | Importance   | Viability |
 | ------------- |:-------------:| -----:|
-| Display a list of album reivews     | 5 | 5  |
+| Display a list of album reviews     | 5 | 5  |
 | open a specific album review      | 5      |   5 |
 | User sign up | 5      |    5 |
 | User CRUD functionality | 5      |    5 |
@@ -83,7 +86,7 @@ In order to create a site which is relevant to its target auidence, various othe
 | paginate list of reviews | 5      |    5 |
 | Responsive design | 5      |    5 |
 | User comments | 4      |    4 |
-| User likes / unlikes | 3      |    4 |
+| User likes / un-likes | 3      |    4 |
 | Admin approval of comments | 4      |    5 |
 | Users can search for content | 3      |    4 |
 | Users have a page of their own content | 2      |    3 |
@@ -109,7 +112,7 @@ Final database model
 
 ### Wireframes 
 
-Before building the site, Balsamiq was utilised to create wireframes of the site. Wireframes were created in order to develop the websites asthetic and to give an impression of the responsive style across different platforms. 
+Before building the site, Balsamiq was utilised to create wireframes of the site. Wireframes were created in order to develop the websites aesthetic and to give an impression of the responsive style across different platforms.
 
 #### Desktop Homepage 
 ![desktop Homepage](documentation_assets/wireframes/homepage_desktop.webp)
@@ -168,24 +171,24 @@ Before building the site, Balsamiq was utilised to create wireframes of the site
 
 ### Colour Schemes
 
-During the inital design phase, I researched a variety of music review based websites. A common theme across the websites is their commitment to netrual and simplified colour schemes. I adapted this approach when designing my site. The reasoning for this choice is that when users upload album artwork, it can  be in a variety of different colours and styles which could potentially clash with an over exhuberant colour scheme design choice. Keeping a sleek, schematic colour scheme minimises any potential clashes with user uploaded image content and keeps the site asthetically pleasing for the user. White, black and sublte grey on the footer and header were used to keep the colour schemes formularized. 
+During the initial design phase, I researched a variety of music review-based websites. A common theme across the websites is their commitment to neutral and simplified colour schemes. I adapted this approach when designing my site. The reasoning for this choice is that when users upload album artwork, it can be in a variety of different colours and styles which could potentially clash with an over exuberant colour scheme design choice. Keeping a sleek, schematic colour scheme minimises any potential clashes with user uploaded image content and keeps the site aesthetically pleasing for the user. White, black and subtle grey on the footer and header were used to keep the colour schemes formularized.
 
 ### Fonts
 
-Andada Pro was chosen at the primary font choice throughout the website. After experimenting with a variety of fonts, Andada Pro provided sleek serif typography which complimented the overall professional, yet calm asthetic of the website. San-serif was chosen as a backup font, should Andada Pro fail. 
+Andada Pro was chosen at the primary font choice throughout the website. After experimenting with a variety of fonts, Andada Pro provided sleek serif typography which complimented the overall professional, yet calm aesthetic of the website. San-serif was chosen as a backup font, should Andada Pro fail. 
 
 
 # Features 
 
 ### Nav Bar 
 
-Every page of the site contain a navigation bar with links to different pages of the site. Each of the links highlight when hovered over to indicate what the user is about to click on. The page which the user is on is highlighed on the navigation bar. The navagation links differ depending if the user is logged in and authenticated or not logged in. 
+Every page of the site contains a navigation bar with links to different pages of the site. Each of the links highlight when hovered over to indicate what the user is about to click on. The page which the user is on is highlighted on the navigation bar. The navigation links differ depending if the user is logged in and authenticated or not logged in. 
 
 When logged out the nav bar displays a 'log in' and 'register' link. 
 ![logged out navbar](documentation_assets/images/nav_bar_logged_out.png)
 
 
-When the user is logged in the nav bar displays the links 'write a post' 'your posts' and 'log out'
+When the user is logged in the nav bar displays the links 'write a post' 'your posts' and 'log out'.
 
 ![logged in navbar](documentation_assets/images/loggedin_in_nav.png)
 
@@ -196,12 +199,12 @@ Users can use the seach bar to search the site for a specific album review.
 
 ### Footer
 
-The footer features on each page. Footer icon links enlarge when hovered over and links open in a seperate page as to note pull the user away from the site.
+The footer features on each page. Footer icon links enlarge when hovered over and links open in a separate page as to note pull the user away from the site.
 ![footer](documentation_assets/images/footer.png)
 
 ### Homepage 
 
-The home page features a hero image with a short overview of what the sebsite is about. 
+The home page features a hero image with a short overview of what the website is about. 
 ![Hero Image](documentation_assets/images/heroimage.png)
 
 
@@ -214,26 +217,29 @@ When a user clicks on the log in page they are asked to sign in with their usern
 
 ![sign in](documentation_assets/images/signin.png)
 
-When a user selects the register they are presented with a registrated form with an option email form detail. 
+When a user selects the register, they are presented with a registration form with an option email form detail. 
 
 ![Register](documentation_assets/images/register.png)
 
-Whilst signed in, users can logg out by clicking on the sign out link which will ask users to confirm signing out 
+Whilst signed in, users can log out by clicking on the sign out link which will ask users to confirm signing out 
 ![Signout](documentation_assets/images/signout.png)
 
 
 ### Add Review Page
 
-When user is logged in they can add their own review. They are presented with a form where they can input: Album title, artist, genre, an album image, their score out of 10 and their review. Users also have the option to publish straight away or to draft the post and return to it later. The slug for the post is automatically generated so the user does not have the option to decide their own slug. 
+When user is logged in they can add their own review. They are presented with a form where they can input: album title, artist, genre, an album image, their score out of 10 and their review. Users also have the option to publish straight away or to draft the post and return to it later. The slug for the post is automatically generated so the user does not have the option to decide their own slug.
+
 
 ![review page](documentation_assets/images/add_review_one.webp)
 
-For the review body, summernote was added so users can have some autonomy on the presentation of their review. Some aspects of summernote were removed from the user however, such as the ability to add images into the body in order to keep the form congruent. 
+For the review body, summernote was added so users can have some autonomy on the presentation of their review. Some aspects of summernote were removed from the user however, such as the ability to add images into the body in order to keep the form congruent.
+
 ![review page](documentation_assets/images/add_review_two.webp)
 
 ### Your posts 
 
-Once signed in, users have the ability to navagate to a page which holds all of their reviews on. From here users, can see all of their posts; published or unpublished.
+Once signed in, users have the ability to navigate to a page which holds all of their reviews on. From here users, can see all of their posts; published or unpublished.
+
 ![Your posts page](documentation_assets/images/your_posts.webp)
 
 Users can manage their posts here by edit and delete buttons.
@@ -244,6 +250,7 @@ Users can manage their posts here by edit and delete buttons.
 ### Edit & Delete Posts
 
 Users can edit their posts either published or unpublished. 
+
 ![Edit Post](documentation_assets/images/your_posts.webp)
 
 
@@ -257,7 +264,7 @@ Users can ultilise the search bar to search the site for reviews. If the searche
 
 ### Messaging 
 
-When users perform certain actions on the site, they will be informed via messaging so it is explicity stated what action they have just performed. 
+When users perform certain actions on the site, they will be informed via messaging so it is explicitly stated what action they have just performed. 
 
 Creating a new post 
 ![creating a new post](documentation_assets/images/create_message.png)
@@ -269,16 +276,15 @@ Deleting a post
 
 ![deleting a post](documentation_assets/images/delete_message.png)
 
-
 signing in 
 ![signing in](documentation_assets/images/sign_in_message.png)
 
 
 ### Admin 
 
-Whilst this a primarily a user centeric CRUD project. The site content can be managed through the admin panel. 
+Whilst this a primarily a user centric CRUD project. The site content can be managed through the admin panel. 
 
-Once published, user reviews are automatically approved onto the site, however the admin can still choose to dissapprove user content should content not be relevant. The admin can also edit and delete user reviews. 
+Once published, user reviews are automatically approved onto the site, however the admin can still choose to disapprove user content should content not be relevant. The admin can also edit and delete user reviews. 
 ![admin panel](documentation_assets/images/admin_approve.png)
 
 User comments are not automatically approved and the admin must approve user comments before they are displayed onto the site. 
@@ -287,7 +293,7 @@ User comments are not automatically approved and the admin must approve user com
 # Testing
 
 ### Google developer tools
-Google chrome developer tools were utilised throughout the building of this website. Elements on the page were maniuplated through the google developer tools and then implemented permanently 
+Google chrome developer tools were utilised throughout the building of this website. Elements on the page were manipulated through the google developer tools and then implemented permanently. 
 
 ### Manual Testing
 Different browsers were used to test the site to ensure cross compatibility including :
@@ -296,11 +302,11 @@ Different browsers were used to test the site to ensure cross compatibility incl
 * Firefox
 * Googlechrome
 
-
 Manual testing on devices was also undertaken, devices tested include:
 
 * Iphone X
-* Ipone 11
+* Iphone 11
+* Iphone 7s 
 * Ipad
 * Huawei p30
 
@@ -337,7 +343,7 @@ Manual testing on devices was also undertaken, devices tested include:
 ### Review Page 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
-| Album reviews | Are they a maximum of 8 album reviews displayed which paginated onto a new page once reached the maximum and are responsive to different devices   | PASS |
+| Album reviews | Are there a maximum of 8 album reviews displayed which are paginated onto a new page once reached the maximum and are responsive to different devices   | PASS |
 | Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
 
 ### Sign In Page 
@@ -351,7 +357,7 @@ Manual testing on devices was also undertaken, devices tested include:
 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
-| Sign up form | Can users register to sign up with a user name and the option of adding an email address? Is the form responsive on multiple devices ?   | PASS |
+| Sign up form | Can users register to sign up with a user name and have the option of adding an email address? Is the form responsive on multiple devices ?   | PASS |
 | Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
 
 
@@ -389,7 +395,7 @@ Manual testing on devices was also undertaken, devices tested include:
 ### Search Page
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
-| Search Bar | Can users, use key words to search for a review ? | Pass |
+| Search Bar | Can users use key words to search for a review ? | Pass |
 | Search results | Are results which include the users searched words in the title or artist displayed ?  | PASS |
 | case sensitivity | Are the search results non-case-sensitive so the results display irrespective of uppercase or lowercase ?  | PASS |
 | Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
@@ -552,7 +558,7 @@ Register Page Mobile
 
 ## Solved bugs
 
-* Initally, the 'edit' page did not allow me to update the image field from the already previously set image. This bug was solved by adding a 'enctype="multipart/form-data' to the form which solved the bug. 
+* Initially, the 'edit' page did not allow me to update the image field from the already previously set image. This bug was solved by adding a 'enctype="multipart/form-data' to the form which solved the bug. 
 
 * When connecting URLS my 'create post' page would not route to the page. Instead a 404 error message would be displayed. This was solved by rearraging the order of the URLS. 
 
@@ -569,7 +575,7 @@ This bug was solved by adding this line into the views file.
 ![comment bug](documentation_assets/images/comment_bug.webp)
 
 
-* When validating the HTML I recieved multiple a tag errors from an improper nesting of the a tag. This bug was resolved by correctly nesting tags inside of the a tag. 
+* When validating the HTML I received multiple a tag errors from an improper nesting of the a tag. This bug was resolved by correctly nesting tags inside of the a tag. 
 ![a tag error](documentation_assets/images/validationbug.png)
 
 * When deploying the project to heroku, the project displayed an application error. 
@@ -583,7 +589,7 @@ This bug was solved by adding ACCOUNT_EMAIL_VERIFICATION = "none" to the setting
 
 # Deployment 
 
-Gitpod workspace was used to develop this project, utilising the code institute template. The project was commited and pushed to github. 
+Gitpod workspace was used to develop this project, utilising the code institute template. The project was committed and pushed to github. 
 
 ### Heroku
 
