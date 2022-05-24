@@ -95,6 +95,24 @@ a, a:hover, a:focus, a:active {
     transform: scale(1.2)
 }
 
+
+/* singin & out styling */ 
+#signup_form p, input {
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#id_remember {
+    display: inline;
+}
+
+.reviewbox a:hover {
+    color: rgb(200, 99, 195);
+    transform: scale(1.2)
+}
+
+
 /* media queries */ 
 
 @media (max-width: 767px) {
