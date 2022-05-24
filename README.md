@@ -273,6 +273,17 @@ Deleting a post
 signing in 
 ![signing in](documentation_assets/images/sign_in_message.png)
 
+
+### Admin 
+
+Whilst this a primarily a user centeric CRUD project. The site content can be managed through the admin panel. 
+
+Once published, user reviews are automatically approved onto the site, however the admin can still choose to dissapprove user content should content not be relevant. The admin can also edit and delete user reviews. 
+![admin panel](documentation_assets/images/admin_approve.png)
+
+User comments are not automatically approved and the admin must approve user comments before they are displayed onto the site. 
+![admin comments](documentation_assets/images/admin_comments.png)
+
 # Testing
 
 ### Google developer tools
