@@ -412,6 +412,19 @@ Sign Up Page
 ![Sign Up validation](documentation_assets/images/signuppage.png)
 * Come back to this section 
 
+## Summernote errors 
+
+Pages which featured the summernote editor presented errors in the html validator. These errors could not be amended due to summernote being embedded from the forms.py rather than the html templates themselves. The pages themselves continue to work on the deployed site. 
+
+Review Page errors
+![Review Page errors](documentation_assets/images/reviewpage_summernote_errors.png)
+
+Write review page errors
+![Write review errors](documentation_assets/images/write_your_review_errors.png)
+
+Edit review page errors
+![Edit review errors](documentation_assets/images/edit_your_review_error.png)
+
 
 ### CSS
 The CSS passed through the validator without any issues.
@@ -565,6 +578,7 @@ In order to deploy to heroku the following steps were taken
 * Created a new app in Heroku
 * created a unique name and location for the app 
 * attached heroku postgres for the project database
+* envy.py file was created 
 * DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were added to the config vars
 * DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were then added and updated in the settings.py file
 * Once project was ready for heroku deployment the debug was set to false in the settings.py file
@@ -617,3 +631,30 @@ Search with no words entered
 
 ### Sign Up Page
 ![Sign Up](documentation_assets/images/finished_signup.png)
+
+
+# Technologies Used 
+
+* HTML5
+* CSS3
+* Python 
+* Bootstrap 5 - used for the styling and responsiveness of the site
+* Cloudinary - cloud storage site used to store images 
+* Summernote - used for the 'body' of users uploaded post, so users can add styling to their review. 
+* PostgreSQL - used as a database for the site
+* Balsamiq – for mock ups of the site
+* Googlefonts – for site fonts
+* Tinypng – for compressing images and converting image files
+* Font awesome – for site icons
+* W3C Markup and Jigsaw validation - used to test and validate the HTML and CSS
+* PEP8 - for validating the python code 
+
+# Credits 
+
+* The reviews content came from https://pitchfork.com/
+
+* https://www.pexels.com/ was used for hero image
+
+* The 'I think therefore I blog' tutorial was used to set up the inital files 
+
+* The 'I think therefore I blog'  was used to support building the comment section
