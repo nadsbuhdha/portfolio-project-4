@@ -197,7 +197,7 @@ Users can use the seach bar to search the site for a specific album review.
 ### Footer
 
 The footer features on each page. Footer icon links enlarge when hovered over and links open in a seperate page as to note pull the user away from the site.
-![footer](documentation_assets/images/footer .png)
+![footer](documentation_assets/images/footer.png)
 
 ### Homepage 
 
@@ -228,7 +228,7 @@ When user is logged in they can add their own review. They are presented with a 
 
 ![review page](documentation_assets/images/add_review_one.webp)
 
-For the review body, crispy forms was added so users can have some autonomy on the presentation of their review. Some aspects of cirspy forms were removed from the user however, such as the ability to add images into the body in order to keep the form congruent. 
+For the review body, summernote was added so users can have some autonomy on the presentation of their review. Some aspects of summernote were removed from the user however, such as the ability to add images into the body in order to keep the form congruent. 
 ![review page](documentation_assets/images/add_review_two.webp)
 
 ### Your posts 
@@ -318,7 +318,7 @@ Manual testing on devices was also undertaken, devices tested include:
 | Search Bar | Can user use key words to search for a post?      |    PASS |
 
 
-### Footer 
+### Footer 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
 | Facebook   | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ? | PASS  |
@@ -327,14 +327,14 @@ Manual testing on devices was also undertaken, devices tested include:
 | Instagram | Does the icon increase in size when hovered over? Does the icon open in a new browser page when clicked on ?  | PASS |
 
 
-### Home page
+### Home page
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
 | Hero Image   | Is the hero image responsive on multiple devices? | PASS  |
 | Album reviews | Are they a maximum of 4 album reviews displayed which are responsive to different devices  | PASS |
 | Heading & Paragraphs | Are the headings and paragraphs responsive on multiple devices? Do the headings maintain congruence?  | PASS |
 
-### Review Page 
+### Review Page 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
 | Album reviews | Are they a maximum of 8 album reviews displayed which paginated onto a new page once reached the maximum and are responsive to different devices   | PASS |
@@ -597,7 +597,7 @@ In order to deploy to heroku the following steps were taken
 * DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were then added and updated in the settings.py file
 * Once project was ready for heroku deployment the debug was set to false in the settings.py file
 * As heroku has disabled automated deployments at the time of deyployment, the terminal was used to deploy the project. 
-* The follwing terminal inputs were used. heroku login -i , heroku git:remote -a he-lost-tapes-p4, git add . && git commit -m "Deploy to Heroku", git push origin main, git push heroku main
+* The follwing terminal inputs were used. heroku login -i , heroku git:remote -a the-lost-tapes-p4, git add . && git commit -m "Deploy to Heroku", git push origin main, git push heroku main
 *
 
 
