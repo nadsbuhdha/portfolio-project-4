@@ -4,6 +4,8 @@
 
 The Lost Tapes is a website dedicated to music album reviews. The Lost Tapes gives the user the ability to read album reviews, write their own album reviews, edit and delete their reviews. Users can also interact with each other in the comment section allowing a community driven ethos which permeates throughout the site. The lost tapes is virtual world where music lovers can share their takes on the latest, or classic, albums and discuss their views and opinion on released albums. 
 
+A live version of the site can be [here](https://the-lost-tapes-p4.herokuapp.com/)
+
 ## UX 
 
 The purpose of this project is to deliver a blog-style music site which allows users to create, read, update, and delete reviews. The target audience for this site is people who are interested in music and would like to read and share the opinions of others on album releases. 
@@ -284,10 +286,10 @@ signing in
 
 Whilst this a primarily a user centric CRUD project. The site content can be managed through the admin panel. 
 
-Once published, user reviews are automatically approved onto the site, however the admin can still choose to disapprove user content should content not be relevant. The admin can also edit and delete user reviews. 
+Once published, user reviews are automatically approved onto the site, however the admin can still choose to disapprove user content should content not be relevant. The admin can also edit and delete user reviews. Automatic approval was chosen to allow an organic flow to the website. 
 ![admin panel](documentation_assets/images/admin_approve.png)
 
-User comments are not automatically approved and the admin must approve user comments before they are displayed onto the site. 
+User comments are not automatically approved and the admin must approve user comments before they are displayed onto the site. The comments await approval to filter out what might be irrelevant posts to the content. 
 ![admin comments](documentation_assets/images/admin_comments.png)
 
 # Testing
@@ -429,7 +431,7 @@ Sign Up Page
 ![Sign Up validation](documentation_assets/images/signuppage.png)
 * Come back to this section 
 
-## Summernote errors 
+### Summernote errors 
 
 Pages which featured the summernote editor presented errors in the html validator. These errors could not be amended due to summernote being embedded from the forms.py rather than the html templates themselves. The pages themselves continue to work on the deployed site. 
 
@@ -483,6 +485,11 @@ wisgi.py Validation
 Settings.py Validation
 On the pep8 validation, the settings.py showed these specific errors however I decided not to alter with the settings files already loaded as they are important files. 
 ![wisgi.py Validation](documentation_assets/images/settingspy_pep.png)
+
+### Pylint Errors
+
+Whilst all python files passed their PEP8 validator, in the terminal they displayed pylint warnings and errors. Through discussion with tutors it was advised that these could be left as they are overly sensitive errors and warnings. 
+![Pylint errors](documentation_assets/images/pylint_errors.png)
 
 ## Lighthouse validation
 
@@ -681,3 +688,5 @@ Search with no words entered
 * The 'I think therefore I blog' tutorial was used to set up the inital files 
 
 * The 'I think therefore I blog'  was used to support building the comment section
+
+* https://www.youtube.com/watch?v=AGtae4L5BbI&t=589s This tutorial was used to help build the search bar. 
