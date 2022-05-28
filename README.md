@@ -606,15 +606,29 @@ Gitpod workspace was used to develop this project, utilising the code institute 
 In order to deploy to heroku the following steps were taken 
 
 * Created a new app in Heroku
-* created a unique name and location for the app 
-* attached heroku postgres for the project database
-* envy.py file was created 
+* Created a unique name and location for the app
+* Attached heroku postgres for the project database
+* envy.py file was created in the GitPod workspace
 * DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were added to the config vars
 * DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were then added and updated in the settings.py file
-* Once project was ready for heroku deployment the debug was set to false in the settings.py file
-* As heroku has disabled automated deployments at the time of deyployment, the terminal was used to deploy the project. 
-* The follwing terminal inputs were used. heroku login -i , heroku git:remote -a the-lost-tapes-p4, git add . && git commit -m "Deploy to Heroku", git push origin main, git push heroku main
-*
+* DATABASE_URL, CLOUDINARY_URL & SECRET_KEY were then added to the envy.py file
+* In the settings.py file the following sections were added:
+    * STATICFILE_STORAGE
+    * STATICFILES_DIRS
+    * STATIC_ROOT
+    * MEDIA_URL
+    * DEFAULT_FILE_STORAGE
+    * TEMPLATES_DIR
+    * Update DIRS in TEMPLATES with TEMPLATES_DIR
+    * Update ALLOWED_HOSTS with [‘the-lost-tapes-p4.heroku.com', 'localhost']
+
+* Once project was ready for heroku the os.enviroemnt[DEVELOPMENT] was set to = 1. 
+* In the settings.py DEBUG was set to 'DEVELOPMENT' in os.environ (to allow debug to be true in the development page but false on HEROKU)
+* As heroku has disabled automated deployments at the time of deyployment, the terminal was used to deploy the project.
+* The following terminal inputs were used. heroku login -i , heroku git:remote -a the-lost-tapes-p4, git add . && git commit -m "Deploy to Heroku", git push origin main, git push heroku main
+
+
+
 
 
 # Finished Product
