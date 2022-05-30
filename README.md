@@ -699,8 +699,8 @@ Search with no words entered
 
 * https://www.pexels.com/ was used for hero image
 
-* The 'I think therefore I blog' tutorial was used to set up the inital files 
+* The 'I think therefore I blog' tutorial was used to set up the initial files 
 
-* The 'I think therefore I blog'  was used to support building the comment section
+* The 'I think therefore I blog' was used to support building the comment section and page pagination. 
 
 * https://www.youtube.com/watch?v=AGtae4L5BbI&t=589s This tutorial was used to help build the search bar. 
