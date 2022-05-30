@@ -240,7 +240,7 @@ For the review body, summernote was added so users can have some autonomy on the
 
 ### Your posts 
 
-Once signed in, users have the ability to navigate to a page which holds all of their reviews on. From here users, can see all of their posts; published or unpublished.
+Once signed in, users have the ability to navigate to a page which holds all of their reviews on. From here, users can see all of their posts; published or unpublished.
 
 ![Your posts page](documentation_assets/images/your_posts.webp)
 
@@ -318,7 +318,7 @@ Manual testing on devices was also undertaken, devices tested include:
 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
-| Logo   | Does the logo linkback to homepage | PASS  |
+| Logo   | Does the logo linkback to homepage? | PASS  |
 | Home Button | Does the home link direct users to home page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  | PASS |
 | Reviews Button | Does the reviews link direct users to reviews page? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?    |    PASS |
 | Log In Button | Does the Log in link direct users to Log In page? Does the Log In link only appear when users are logged out ? Does the hover effect work when mouse hovers over button? Is the button highlighted with the page is active?  |    PASS|
@@ -339,13 +339,13 @@ Manual testing on devices was also undertaken, devices tested include:
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
 | Hero Image   | Is the hero image responsive on multiple devices? | PASS  |
-| Album reviews | Are they a maximum of 4 album reviews displayed which are responsive to different devices  | PASS |
+| Album reviews | Are they a maximum of 4 album reviews displayed which are responsive to different devices?  | PASS |
 | Heading & Paragraphs | Are the headings and paragraphs responsive on multiple devices? Do the headings maintain congruence?  | PASS |
 
 ### Review Page 
 | Feature        | Test    | Outcome |
 | ------------- |-------------| -----|
-| Album reviews | Are there a maximum of 8 album reviews displayed which are paginated onto a new page once reached the maximum and are responsive to different devices   | PASS |
+| Album reviews | Are there a maximum of 8 album reviews displayed which are paginated onto a new page once reached the maximum and are responsive to different devices?   | PASS |
 | Heading | Are the headings responsive on multiple devices? Do the headings maintain congruence?  | PASS |
 
 ### Sign In Page 
@@ -482,7 +482,7 @@ view.py Validation
 wisgi.py Validation
 ![wisgi.py Validation](documentation_assets/images/wisgi_validation.png)
 
-Settings.py Validation
+### Settings.py Validation
 On the pep8 validation, the settings.py showed these specific errors however I decided not to alter with the settings files already loaded as they are important files. 
 ![wisgi.py Validation](documentation_assets/images/settingspy_pep.png)
 

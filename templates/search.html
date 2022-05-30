@@ -24,7 +24,7 @@
                                   <img class="card-img-top"
                                       src="https://res.cloudinary.com/dtyxhz3uy/image/upload/v1650360001/defaultimage_ihq5se.jpg" alt="default image multicoloured records">
                                   {% else %}
-                                  <img class="card-img-top" src=" {{ review.album_image.url }}" alt="{{post.album_title}} by {{post.artist}}">
+                                  <img class="card-img-top" src=" {{ review.album_image.url }}" alt="{{review.album_title}} by {{review.artist}}">
                                   {% endif %}
                               </div></a>
                               <div class="card-body">
